@@ -1,40 +1,28 @@
 const elem = document.querySelector("#space");
 if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
-    //alert("This is going to work");
-    var gn = new GyroNorm();
+    
+    window.addEventListener("deviceorientation", handleOrientation, true);
 
-    let displayText = document.querySelector("#text");
+    function handleOrientation(event) {
+        let xTilt = event.beta;
+        let yTilt = event.gamma;
 
-   //alert('this is new');
-
-    gn.init().then(function() {
-        start_gn();
-    });
-
-    function start_gn() {
-        gn.start(gnCallBack);
-    }
-
-    function gnCallBack(data) {
         displayText.innerText = `This new again`;
         let _w = window.innerWidth/2;
         let _h = window.innerHeight/2;
         //let _mouseX = data.dm.x;
         //let _mouseY = data.dm.y;
         let _depth1 = `50% 50%`;
-        let _depth2 = `${data.dm.x}% ${data.dm.z}%`;
-        let _depth3 = `${data.dm.x * 10}% ${data.dm.z * 10}%`;
-        let _depth4 = `${data.dm.x * 20}% ${data.dm.z * 20}%`;
-        let _depth5 = `${data.dm.x * 40}% ${data.dm.z * 40}%`;
+        let _depth2 = `${xTilt}% ${yTilt}%`;
+        let _depth3 = `${xTilt * 10}% ${yTilt * 10}%`;
+        let _depth4 = `${xTilt * 20}% ${yTilt * 20}%`;
+        let _depth5 = `${xTilt * 40}% ${yTilt * 40}%`;
         let x = `${_depth5}, ${_depth4}, ${_depth3}, ${_depth2}, ${_depth1}`;
         //console.log(x);
-        if (elem.style.backgroundPosition > x) {
-            elem.style.backgroundPosition -= x;
-        } else {
-            elem.style.backgroundPosition += x;
-        }
-        
+        elem.style.backgroundPosition = x;
     }
+        
+    
 
 } else {
     // setup some mouse following hack
@@ -63,6 +51,24 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
 
 
 
+//alert("This is going to work");
+    /*var gn = new GyroNorm();
+
+    let displayText = document.querySelector("#text");
+
+   //alert('this is new');
+
+    gn.init().then(function() {
+        start_gn();
+    });
+
+    function start_gn() {
+        gn.start(gnCallBack);
+    }
+
+    function gnCallBack(data) {
+        }
+        */
         // Process:
     // data.do.alpha	( deviceorientation event alpha value )
     // data.do.beta		( deviceorientation event beta value )
