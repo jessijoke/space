@@ -7,7 +7,7 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
 
     function handleOrientation(event) {
         let xTilt = event.beta;
-        let yTilt = event.gamma;
+        let yTilt = event.alpha;
 
         displayText.innerText = `Changing the message so I know it updated`;
         let _w = window.innerWidth/2;
