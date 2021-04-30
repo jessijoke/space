@@ -6,10 +6,10 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
     window.addEventListener("deviceorientation", handleOrientation, true);
 
     function handleOrientation(event) {
-        let xTilt = event.alpha;
+        let xTilt = event.beta;
         let yTilt = event.gamma;
 
-        displayText.innerText = `bah humbug`;
+        //displayText.innerText = `bah humbug`;
         let _w = window.innerWidth/2;
         let _h = window.innerHeight/2;
         //let _mouseX = data.dm.x;
