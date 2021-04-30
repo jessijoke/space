@@ -4,8 +4,15 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
 
     let displayText = document.querySelector("#text");
 
-    gn.init().then(function(){
-    gn.start(function(data){
+    gn.init(args).then(function() {
+        start_gn();
+    });
+
+    function start_gn() {
+        gn.start(gnCallBack);
+    }
+
+    function gnCallBack(data) {
         displayText.innerText = "hai";
         let _w = window.innerWidth/2;
         let _h = window.innerHeight/2;
@@ -17,13 +24,10 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
         let _depth4 = `${50 - (_mouseX - _w) * 0.007}% ${50 - (_mouseY - _h) * 0.007}%`;
         let _depth5 = `${50 - (_mouseX - _w) * 0.03}% ${50 - (_mouseY - _h) * 0.03}%`;
         let x = `${_depth5}, ${_depth4}, ${_depth3}, ${_depth2}, ${_depth1}`;
-        console.log(x);
+        //console.log(x);
         elem.style.backgroundPosition = x;
-        
-    });
-    }).catch(function(e){
-    // Catch if the DeviceOrientation or DeviceMotion is not supported by the browser or device
-    });
+    }
+
 } else {
     // setup some mouse following hack
     (function() {
