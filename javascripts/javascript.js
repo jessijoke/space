@@ -16,16 +16,17 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
     }
 
     function gnCallBack(data) {
-        displayText.innerText = `This is new`;
+        displayText.innerText = `This`;
         let _w = window.innerWidth/2;
         let _h = window.innerHeight/2;
         //let _mouseX = data.dm.x;
         //let _mouseY = data.dm.y;
+        let _depth1 = `50% 50%`;
         let _depth2 = `${data.dm.x}% ${data.dm.y}%`;
         let _depth3 = `${data.dm.x * 2}% ${data.dm.y * 2}%`;
         let _depth4 = `${data.dm.x * 4}% ${data.dm.y * 4}%`;
         let _depth5 = `${data.dm.x * 5}% ${data.dm.y * 5}%`;
-        let x = `${_depth5}, ${_depth4}, ${_depth3}, ${_depth2}`;
+        let x = `${_depth5}, ${_depth4}, ${_depth3}, ${_depth2}, ${_depth1}`;
         console.log(x);
         elem.style.backgroundPosition = x;
     }
