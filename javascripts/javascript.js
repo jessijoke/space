@@ -15,7 +15,7 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
     }
 
     function gnCallBack(data) {
-        displayText.innerText = "hai";
+        displayText.innerText = `${data.dm.x}`;
         let _w = window.innerWidth/2;
         let _h = window.innerHeight/2;
         let _mouseX = data.dm.x;
