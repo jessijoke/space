@@ -2,9 +2,11 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
     //alert("This is going to work");
     var gn = new GyroNorm();
 
+    let displayText = document.querySelector("#text");
+
     gn.init().then(function(){
     gn.start(function(data){
-        
+        displayText.innerText = data.dm.x;
         let _w = window.innerWidth/2;
         let _h = window.innerHeight/2;
         let _mouseX = data.dm.x;
