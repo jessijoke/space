@@ -1,3 +1,4 @@
+const elem = document.querySelector("#space");
 if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
     //alert("This is going to work");
     var gn = new GyroNorm();
@@ -26,7 +27,7 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
         let _depth4 = `${data.dm.x}% ${data.dm.y}%`;
         let _depth5 = `${data.dm.x}% ${data.dm.y}%`;
         let x = `${_depth5}, ${_depth4}, ${_depth3}, ${_depth2}, ${_depth1}`;
-        //console.log(x);
+        console.log(x);
         elem.style.backgroundPosition = x;
     }
 
@@ -35,7 +36,6 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
     (function() {
         // Add event listener
         document.addEventListener("mousemove", space);
-        const elem = document.querySelector("#space");
         // Magic happens here
         function space(e) {
             let _w = window.innerWidth/2;
