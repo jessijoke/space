@@ -4,7 +4,7 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
 
     let displayText = document.querySelector("#text");
 
-    gn.init(args).then(function() {
+    gn.init().then(function() {
         start_gn();
     });
 
