@@ -8,9 +8,34 @@
 }
 
 #text {
+  height: 150px;
+  width: 100%;
+  line-height: 150px;
+  letter-spacing: 20px;
+  text-align: center;
   color: white;
   font-family: 'Cinzel', serif;
   font-size: 40px;
+  -webkit-animation: spaceText 5s ease-in-out alternate infinite;
+          animation: spaceText 5s ease-in-out alternate infinite;
+}
+
+@-webkit-keyframes spaceText {
+  from {
+    letter-spacing: 20px;
+  }
+  to {
+    letter-spacing: 60px;
+  }
+}
+
+@keyframes spaceText {
+  from {
+    letter-spacing: 20px;
+  }
+  to {
+    letter-spacing: 60px;
+  }
 }
 
 .spaceHeader {

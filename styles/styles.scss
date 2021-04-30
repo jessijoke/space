@@ -12,9 +12,22 @@
 }
 
 #text {
+    height: 150px;
+    width: 100%;
+    line-height: 150px;
+    letter-spacing: 20px;
+    text-align: center;
+    //background-color: rgba($color: #a31275, $alpha: .3);
+    //mix-blend-mode: luminosity;
     color: white;
     font-family: 'Cinzel', serif;
     font-size: 40px;
+    animation: spaceText 5s ease-in-out alternate infinite;
+}
+
+@keyframes spaceText {
+    from { letter-spacing: 20px; }
+    to { letter-spacing: 60px;}
 }
 
 .spaceHeader {
