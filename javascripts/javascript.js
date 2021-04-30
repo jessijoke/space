@@ -21,7 +21,8 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
         //console.log(x);
         elem.style.backgroundPosition = x;
     }
-        
+
+    setTimeout(handleOrientation, 100);
     
 
 } else {
