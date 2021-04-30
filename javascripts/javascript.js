@@ -27,7 +27,7 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
         let _depth5 = `${50 - (_mouseX - _w) * 0.03}% ${50 - (_mouseY - _h) * 0.03}%`;
         let x = `${_depth5}, ${_depth4}, ${_depth3}, ${_depth2}, ${_depth1}`;
         //console.log(x);
-        elem.style.backgroundPosition = x;
+        elem.style.backgroundPosition = data.dm.x;
     }
 
 } else {
