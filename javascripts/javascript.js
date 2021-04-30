@@ -22,7 +22,7 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
         elem.style.backgroundPosition = x;
     }
 
-    setTimeout(handleOrientation, 100);
+    setTimeout(handleOrientation(), 100);
     
 
 } else {
