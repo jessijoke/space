@@ -6,7 +6,7 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
 
     gn.init().then(function(){
     gn.start(function(data){
-        displayText.innerText = data.dm.x;
+        displayText.innerText = "hai";
         let _w = window.innerWidth/2;
         let _h = window.innerHeight/2;
         let _mouseX = data.dm.x;
