@@ -9,7 +9,7 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
         let xTilt = event.beta;
         let yTilt = event.gamma;
 
-        displayText.innerText = `It's a brand new day, and the sun is high, all the angels singing that you're gonna die`;
+        displayText.innerText = `Changing the message so I know it updated`;
         let _w = window.innerWidth/2;
         let _h = window.innerHeight/2;
         //let _mouseX = data.dm.x;
