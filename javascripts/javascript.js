@@ -5,7 +5,7 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
 
     let displayText = document.querySelector("#text");
 
-    alert('this is new');
+   //alert('this is new');
 
     gn.init().then(function() {
         start_gn();
@@ -16,17 +16,16 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
     }
 
     function gnCallBack(data) {
-        displayText.innerText = `${data.dm.x}`;
+        displayText.innerText = `This is new`;
         let _w = window.innerWidth/2;
         let _h = window.innerHeight/2;
         //let _mouseX = data.dm.x;
         //let _mouseY = data.dm.y;
-        let _depth1 = `${data.dm.x}% ${data.dm.y}%`;
         let _depth2 = `${data.dm.x}% ${data.dm.y}%`;
-        let _depth3 = `${data.dm.x}% ${data.dm.y}%`;
-        let _depth4 = `${data.dm.x}% ${data.dm.y}%`;
-        let _depth5 = `${data.dm.x}% ${data.dm.y}%`;
-        let x = `${_depth5}, ${_depth4}, ${_depth3}, ${_depth2}, ${_depth1}`;
+        let _depth3 = `${data.dm.x * 2}% ${data.dm.y * 2}%`;
+        let _depth4 = `${data.dm.x * 4}% ${data.dm.y * 4}%`;
+        let _depth5 = `${data.dm.x * 5}% ${data.dm.y * 5}%`;
+        let x = `${_depth5}, ${_depth4}, ${_depth3}, ${_depth2}`;
         console.log(x);
         elem.style.backgroundPosition = x;
     }
