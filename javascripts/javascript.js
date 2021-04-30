@@ -18,16 +18,16 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
         displayText.innerText = `${data.dm.x}`;
         let _w = window.innerWidth/2;
         let _h = window.innerHeight/2;
-        let _mouseX = data.dm.x;
-        let _mouseY = data.dm.y;
-        let _depth1 = `${50 - (_mouseX - _w) * 0.000001}% ${50 - (_mouseY - _h) * 0.000001}%`;
-        let _depth2 = `${50 - (_mouseX - _w) * 0.00002}% ${50 - (_mouseY - _h) * 0.00002}%`;
-        let _depth3 = `${50 - (_mouseX - _w) * 0.0005}% ${50 - (_mouseY - _h) * 0.0005}%`;
-        let _depth4 = `${50 - (_mouseX - _w) * 0.007}% ${50 - (_mouseY - _h) * 0.007}%`;
-        let _depth5 = `${50 - (_mouseX - _w) * 0.03}% ${50 - (_mouseY - _h) * 0.03}%`;
+        //let _mouseX = data.dm.x;
+        //let _mouseY = data.dm.y;
+        let _depth1 = `${data.dm.x}% ${data.dm.y}%`;
+        let _depth2 = `${data.dm.x}% ${data.dm.y}%`;
+        let _depth3 = `${data.dm.x}% ${data.dm.y}%`;
+        let _depth4 = `${data.dm.x}% ${data.dm.y}%`;
+        let _depth5 = `${data.dm.x}% ${data.dm.y}%`;
         let x = `${_depth5}, ${_depth4}, ${_depth3}, ${_depth2}, ${_depth1}`;
         //console.log(x);
-        elem.style.backgroundPosition = data.dm.x;
+        elem.style.backgroundPosition = x;
     }
 
 } else {
