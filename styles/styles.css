@@ -2,7 +2,7 @@
   width: 100vw;
   height: 100vh;
   background-image: url("/space/images/background-5.png"), url("/space/images/background-4.png"), url("/space/images/background-3.png"), url("/space/images/background-2.png"), url("/space/images/background-1.png");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center;
   background-position: 50% 50%;
 }
