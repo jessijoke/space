@@ -23,12 +23,17 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
         //let _mouseY = data.dm.y;
         let _depth1 = `50% 50%`;
         let _depth2 = `${data.dm.x}% ${data.dm.z}%`;
-        let _depth3 = `${data.dm.x * 4}% ${data.dm.z * 4}%`;
-        let _depth4 = `${data.dm.x * 7}% ${data.dm.z * 7}%`;
-        let _depth5 = `${data.dm.x * 10}% ${data.dm.z * 10}%`;
+        let _depth3 = `${data.dm.x * 10}% ${data.dm.z * 10}%`;
+        let _depth4 = `${data.dm.x * 20}% ${data.dm.z * 20}%`;
+        let _depth5 = `${data.dm.x * 40}% ${data.dm.z * 40}%`;
         let x = `${_depth5}, ${_depth4}, ${_depth3}, ${_depth2}, ${_depth1}`;
-        console.log(x);
-        elem.style.backgroundPosition = x;
+        //console.log(x);
+        if (elem.style.backgroundPosition > x) {
+            elem.style.backgroundPosition -= x;
+        } else {
+            elem.style.backgroundPosition += x;
+        }
+        
     }
 
 } else {
