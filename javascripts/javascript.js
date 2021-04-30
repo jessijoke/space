@@ -9,7 +9,7 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
         let xTilt = event.beta;
         let yTilt = event.gamma;
 
-        displayText.innerText = `Omg so close just need the math right`;
+        displayText.innerText = `${xTilt}xtilt .... ${yTilt}`;
         let _w = window.innerWidth/2;
         let _h = window.innerHeight/2;
         //let _mouseX = data.dm.x;
