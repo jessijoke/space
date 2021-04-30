@@ -1,4 +1,6 @@
 const elem = document.querySelector("#space");
+const displayText = document.querySelector("#text");
+
 if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
     
     window.addEventListener("deviceorientation", handleOrientation, true);
