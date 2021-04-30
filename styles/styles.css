@@ -10,10 +10,12 @@
 #text {
   color: white;
   font-family: 'Cinzel', serif;
-  font-size: 20px;
+  font-size: 40px;
 }
 
 .spaceHeader {
+  width: 100vw;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
