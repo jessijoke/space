@@ -9,16 +9,16 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
         let xTilt = event.beta;
         let yTilt = event.gamma;
 
-        displayText.innerText = `This new again`;
+        displayText.innerText = `Omg so close`;
         let _w = window.innerWidth/2;
         let _h = window.innerHeight/2;
         //let _mouseX = data.dm.x;
         //let _mouseY = data.dm.y;
         let _depth1 = `50% 50%`;
         let _depth2 = `${xTilt}% ${yTilt}%`;
-        let _depth3 = `${xTilt * 10}% ${yTilt * 10}%`;
-        let _depth4 = `${xTilt * 20}% ${yTilt * 20}%`;
-        let _depth5 = `${xTilt * 40}% ${yTilt * 40}%`;
+        let _depth3 = `${xTilt * 5}% ${yTilt * 5}%`;
+        let _depth4 = `${xTilt * 10}% ${yTilt * 10}%`;
+        let _depth5 = `${xTilt * 20}% ${yTilt * 20}%`;
         let x = `${_depth5}, ${_depth4}, ${_depth3}, ${_depth2}, ${_depth1}`;
         //console.log(x);
         elem.style.backgroundPosition = x;
