@@ -9,23 +9,24 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
         let xTilt = event.beta;
         let yTilt = event.gamma;
 
-        displayText.innerText = `${xTilt}xtilt .... ${yTilt}`;
+        displayText.innerText = `${xTilt}xtilt .... ${yTilt} adding new math`;
         let _w = window.innerWidth/2;
         let _h = window.innerHeight/2;
         //let _mouseX = data.dm.x;
         //let _mouseY = data.dm.y;
         let _depth1 = `50% 50%`;
         let _depth2 = `${50 - (xTilt)}% ${50 - (yTilt)}%`;
-        let _depth3 = `${50 - (xTilt * 1)}% ${50 - (yTilt * 1)}%`;
-        let _depth4 = `${50 - (xTilt * 3)}% ${50 - (yTilt * 3)}%`;
-        let _depth5 = `${50 - (xTilt * 5)}% ${50 - (yTilt * 5)}%`;
+        let _depth3 = `${50 - ((xTilt + 20) * .5)}% ${(xTilt + 20) * .5)}%`;
+        let _depth4 = `${50 - ((xTilt + 20) * 1.5)}% ${(xTilt + 20) * 1.5)}%`;
+        let _depth5 = `${50 - ((xTilt + 20) * 3)}% ${(xTilt + 20) * 3)}%`;
         let x = `${_depth5}, ${_depth4}, ${_depth3}, ${_depth2}, ${_depth1}`;
         //console.log(x);
         elem.style.backgroundPosition = x;
     }
 
     setTimeout(handleOrientation(), 100);
-    
+    //-13-17 xtilt
+    //36
 
 } else {
     // setup some mouse following hack
