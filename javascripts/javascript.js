@@ -6,7 +6,7 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
     window.addEventListener("deviceorientation", handleOrientation, true);
 
     function handleOrientation(event) {
-        let xTilt = event.beta;
+        let xTilt = event.alpha;
         let yTilt = event.gamma;
 
         displayText.innerText = `bah humbug`;
