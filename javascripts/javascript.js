@@ -1,9 +1,10 @@
 if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
+    alert("This is going to work");
     var gn = new GyroNorm();
 
     gn.init().then(function(){
     gn.start(function(data){
-        alert(data.dm.x);
+        
     });
     }).catch(function(e){
     // Catch if the DeviceOrientation or DeviceMotion is not supported by the browser or device
