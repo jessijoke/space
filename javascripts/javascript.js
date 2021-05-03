@@ -15,7 +15,7 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
         //let _mouseX = data.dm.x;
         //let _mouseY = data.dm.y;
         let _depth1 = `50% 50%`;
-        let _depth2 = `${50 - (xTilt)}% ${50 - (xTilt)}%`;
+        let _depth2 = `${50 - (xTilt)}% ${50 - (yTilt)}%`;
         let _depth3 = `${50 - ((xTilt + 5000) / .0000000005)}% ${50 - ((yTilt + 5000) / .0000000005)}%`;
         let _depth4 = `${50 - ((xTilt + 100) / .00005)}% ${50 - ((yTilt + 100) / .00005)}%`;
         let _depth5 = `${50 - ((xTilt + 1) / 1)}% ${50 - ((yTilt + 1) / 1)}%`;
