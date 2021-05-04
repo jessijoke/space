@@ -6,14 +6,11 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
     window.addEventListener("deviceorientation", handleOrientation, true);
 
     function handleOrientation(event) {
-        let xTilt = event.beta;
+        let xTilt = event.alpha;
         let yTilt = event.gamma;
 
-        //displayText.innerText = `bah humbug`;
         let _w = window.innerWidth/2;
         let _h = window.innerHeight/2;
-        //let _mouseX = data.dm.x;
-        //let _mouseY = data.dm.y;
         let _depth1 = `50% 50%`;
         let _depth2 = `${10000 - ((yTilt + 1000) / .1000)}% ${10000 - ((xTilt + 1000) / .1000)}%`;
         let _depth3 = `${1000 - ((yTilt + 100) / .1000)}% ${1000 - ((xTilt + 100) / .1000)}%`;
@@ -25,8 +22,7 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
     }
 
     setTimeout(handleOrientation(), 100);
-    //-13-17 xtilt
-    //36
+
 
 } else {
     // setup some mouse following hack
