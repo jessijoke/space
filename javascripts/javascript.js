@@ -1,27 +1,27 @@
 const elem = document.querySelector("#space");
 const displayText = document.querySelector("#text");
 
+function handleOrientation(event) {
+    let xTilt = event.beta;
+    let yTilt = event.gamma;
+
+    let _w = window.innerWidth/2;
+    let _h = window.innerHeight/2;
+    let _depth1 = `50% 50%`;
+    let _depth2 = `${10000 - ((yTilt + 1000) / .1000)}% ${10000 - ((xTilt + 1000) / .1000)}%`;
+    let _depth3 = `${1000 - ((yTilt + 100) / .1000)}% ${1000 - ((xTilt + 100) / .1000)}%`;
+    let _depth4 = `${100 - ((yTilt + 10) / .1000)}% ${100 - ((xTilt + 10) / .1000)}%`;
+    let _depth5 = `${50 - ((yTilt + 1) / .1000)}% ${50 - ((xTilt + 1) / .1000)}%`;
+    let x = `${_depth5}, ${_depth4}, ${_depth3}, ${_depth2}, ${_depth1}`;
+    //console.log(x);
+    elem.style.backgroundPosition = x;
+}
+
 if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
         DeviceMotionEvent.requestPermission().then(response => {
             if (response == 'granted') {
                 console.log("accelerometer permission granted");
                 window.addEventListener("deviceorientation", handleOrientation, true);
-
-                function handleOrientation(event) {
-                    let xTilt = event.beta;
-                    let yTilt = event.gamma;
-
-                    let _w = window.innerWidth/2;
-                    let _h = window.innerHeight/2;
-                    let _depth1 = `50% 50%`;
-                    let _depth2 = `${10000 - ((yTilt + 1000) / .1000)}% ${10000 - ((xTilt + 1000) / .1000)}%`;
-                    let _depth3 = `${1000 - ((yTilt + 100) / .1000)}% ${1000 - ((xTilt + 100) / .1000)}%`;
-                    let _depth4 = `${100 - ((yTilt + 10) / .1000)}% ${100 - ((xTilt + 10) / .1000)}%`;
-                    let _depth5 = `${50 - ((yTilt + 1) / .1000)}% ${50 - ((xTilt + 1) / .1000)}%`;
-                    let x = `${_depth5}, ${_depth4}, ${_depth3}, ${_depth2}, ${_depth1}`;
-                    //console.log(x);
-                    elem.style.backgroundPosition = x;
-                }
 
                 setTimeout(handleOrientation(), 100);
 
