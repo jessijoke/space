@@ -1,9 +1,9 @@
 const elem = document.querySelector("#space");
 const displayText = document.querySelector("#text");
 
-function handleOrientation(event) {
-    let xTilt = event.beta;
-    let yTilt = event.gamma;
+function handleOrientation(e) {
+    let xTilt = e.beta;
+    let yTilt = e.gamma;
 
     let _w = window.innerWidth/2;
     let _h = window.innerHeight/2;
@@ -21,9 +21,9 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
        // DeviceMotionEvent.requestPermission().then(response => {
         //    if (response == 'granted') {
          //       console.log("accelerometer permission granted");
-                window.addEventListener("deviceorientation", handleOrientation, true);
+                window.addEventListener("deviceorientation", e => setTimeout(handleOrientation(e), 100), true);
 
-                setTimeout(handleOrientation(), 100);
+                
 
         //    }
        // });
