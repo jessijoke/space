@@ -2,7 +2,6 @@ const elem = document.querySelector("#space");
 const displayText = document.querySelector("#text");
 
 if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
-    function getAccel(){
         DeviceMotionEvent.requestPermission().then(response => {
             if (response == 'granted') {
                 console.log("accelerometer permission granted");
@@ -28,7 +27,6 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
 
             }
         });
-    }
     
 
 } else {
