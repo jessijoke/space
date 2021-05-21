@@ -18,15 +18,15 @@ function handleOrientation(event) {
 }
 
 if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
-        DeviceMotionEvent.requestPermission().then(response => {
-            if (response == 'granted') {
-                console.log("accelerometer permission granted");
+       // DeviceMotionEvent.requestPermission().then(response => {
+        //    if (response == 'granted') {
+         //       console.log("accelerometer permission granted");
                 window.addEventListener("deviceorientation", handleOrientation, true);
 
                 setTimeout(handleOrientation(), 100);
 
-            }
-        });
+        //    }
+       // });
     
 
 } else {
