@@ -1,3 +1,58 @@
+#mainNavigation {
+  height: 64px;
+  width: 100vw;
+  position: fixed;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.navElements {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 15px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navElements a {
+  font-family: 'Work Sans', sans-serif;
+  text-decoration: none;
+  color: #687081;
+}
+
+.navElements a:hover {
+  text-decoration: underline;
+  color: #852e77;
+}
+
+a.activeLink {
+  color: #010e27;
+}
+
 #space {
   width: 100vw;
   height: 100vh;
@@ -13,7 +68,7 @@
   letter-spacing: 20px;
   text-align: center;
   color: white;
-  font-family: 'Cinzel', serif;
+  font-family: 'Work Sans', sans-serif;
   font-size: 40px;
   -webkit-animation: spaceText 5s ease-in-out alternate infinite;
           animation: spaceText 5s ease-in-out alternate infinite;
@@ -24,7 +79,7 @@
     letter-spacing: 20px;
   }
   to {
-    letter-spacing: 60px;
+    letter-spacing: 40px;
   }
 }
 
@@ -33,7 +88,7 @@
     letter-spacing: 20px;
   }
   to {
-    letter-spacing: 60px;
+    letter-spacing: 40px;
   }
 }
 

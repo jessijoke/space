@@ -30,11 +30,8 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
     
 
 } else {
-    // setup some mouse following hack
     (function() {
-        // Add event listener
         document.addEventListener("mousemove", space);
-        // Magic happens here
         function space(e) {
             let _w = window.innerWidth/2;
             let _h = window.innerHeight/2;
@@ -46,7 +43,6 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
             let _depth4 = `${50 - (_mouseX - _w) * 0.07}% ${50 - (_mouseY - _h) * 0.07}%`;
             let _depth5 = `${50 - (_mouseX - _w) * 0.3}% ${50 - (_mouseY - _h) * 0.3}%`;
             let x = `${_depth5}, ${_depth4}, ${_depth3}, ${_depth2}, ${_depth1}`;
-            //console.log(x);
             elem.style.backgroundPosition = x;
         }
     

@@ -1,3 +1,43 @@
+#mainNavigation {
+    height: 64px;
+    width: 100vw;
+    //padding: 0px 15px 0px 15px;
+    position: fixed;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.navElements {
+    width: 60%;
+    display: flex;
+    padding-right: 15px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navElements a {
+    font-family: 'Work Sans', sans-serif;
+    text-decoration: none;
+    color: #687081;
+}
+
+.navElements a:hover {
+    text-decoration: underline;
+    color: #852e77;
+}
+
+a.activeLink {
+    color: #010e27;
+}
+
 #space {
     width: 100vw;
     height: 100vh;
@@ -20,14 +60,14 @@
     //background-color: rgba($color: #a31275, $alpha: .3);
     //mix-blend-mode: luminosity;
     color: white;
-    font-family: 'Cinzel', serif;
+    font-family: 'Work Sans', sans-serif;
     font-size: 40px;
     animation: spaceText 5s ease-in-out alternate infinite;
 }
 
 @keyframes spaceText {
     from { letter-spacing: 20px; }
-    to { letter-spacing: 60px;}
+    to { letter-spacing: 40px;}
 }
 
 .spaceHeader {
