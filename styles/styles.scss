@@ -1,4 +1,7 @@
+
+
 #mainNavigation {
+    z-index: 1;
     height: 64px;
     width: 100vw;
     //padding: 0px 15px 0px 15px;
@@ -12,13 +15,13 @@
 
 .logo {
     padding-top: 15px;
-    padding-left: 15px;
+    padding-left: 30px;
 }
 
 .navElements {
     width: 60%;
     display: flex;
-    padding-right: 15px;
+    padding-right: 30px;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -51,11 +54,50 @@ a.activeLink {
     //background-position: 50% 50%;
 }
 
+.scroll-container,
+.scroll-area {
+  max-width: 100vw;
+  height: 100vh;
+}
+
+.scroll-container {
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-area {
+  scroll-snap-align: start;
+}
+
+.scroll-container,
+.scroll-area {
+  margin: 0 auto;
+}
+
+.scroll-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+
+/*-------------Home Page CSS-------------*/
+
+.spaceHeader {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #text {
     height: 150px;
     width: 100%;
     line-height: 150px;
-    letter-spacing: 20px;
+    letter-spacing: 15px;
     text-align: center;
     //background-color: rgba($color: #a31275, $alpha: .3);
     //mix-blend-mode: luminosity;
@@ -70,10 +112,20 @@ a.activeLink {
     to { letter-spacing: 40px;}
 }
 
-.spaceHeader {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.earth {
+    position: relative;
+    top: -400px;
+    left: -250px;
+    width: 250px;
+    height: 250px;
+    animation-name: floating;
+    animation-duration: 2.7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(2px, 8px); }
+    100%   { transform: translate(0, -0px); }    
 }

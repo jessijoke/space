@@ -22,18 +22,28 @@
         <nav id="mainNavigation">
             <div class="logo"><img src="/space/images/logo.png"></div>
             <div class="navElements">
-                <div class="navElementInner"><a href="#" class="activeLink">HOME</a></div>
-                <div class="navElementInner"><a href="#">EXHIBITS</a></div>
-                <div class="navElementInner"><a href="#">TICKETS</a></div>
-                <div class="navElementInner"><a href="#">SHOWS</a></div>
-                <div class="navElementInner"><a href="#">CAFE</a></div>
+                <div class="navElementInner"><a href="#home" class="activeLink">HOME</a></div>
+                <div class="navElementInner"><a href="#exhibits">EXHIBITS</a></div>
+                <div class="navElementInner"><a href="#tickets">TICKETS</a></div>
+                <div class="navElementInner"><a href="#shows">SHOWS</a></div>
+                <div class="navElementInner"><a href="#cafe">CAFE</a></div>
             </div>
         </nav>
         <div id="space">
-            <div class="spaceHeader">
-                <div id="text">Explore</div>
+            <div class="scroll-container">
+                <div class="scroll-area" id="home">
+                    <div class="spaceHeader">
+                        <div id="text">Explore</div>
+                    </div>
+                    <div class="earth"><img src="/space/images/planet.png"></div>
+                </div>
+                <div class="scroll-area" id="exhibits">exhibits</div>
+                <div class="scroll-area" id="tickets">tickets</div>
+                <div class="scroll-area" id="shows">shows</div>
+                <div class="scroll-area" id="cafe">cafe</div>
             </div>
         </div>
         <script src="/space/javascripts/javascript.js" async defer></script>
+        <script src="/space/javascripts/home.js" async defer></script>
     </body>
 </html>
