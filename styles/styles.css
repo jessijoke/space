@@ -1,9 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
+
 #mainNavigation {
-  z-index: 1;
+  z-index: 100;
   height: 64px;
   width: 100vw;
   position: fixed;
-  background-color: white;
+  background-color: rgba(20, 9, 36, 0.5);
+  background-blend-mode: overlay;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,7 +34,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-right: 30px;
+  padding-right: 45px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -42,48 +47,34 @@
 .navElements a {
   font-family: 'Work Sans', sans-serif;
   text-decoration: none;
-  color: #687081;
+  color: #c308cf;
 }
 
 .navElements a:hover {
-  text-decoration: underline;
-  color: #852e77;
+  color: #8d52e5;
 }
 
 a.activeLink {
-  color: #010e27;
+  color: white;
 }
 
 #space {
-  width: 100vw;
+  position: fixed;
+  width: 100%;
   height: 100vh;
   background-image: url("/space/images/background-5.png"), url("/space/images/background-4.png"), url("/space/images/background-3.png"), url("/space/images/background-2.png"), url("/space/images/background-1.png");
   background-repeat: repeat;
   background-position: center;
 }
 
-.scroll-container,
-.scroll-area {
-  max-width: 100vw;
+.sections-container,
+.section {
+  width: 100%;
   height: 100vh;
 }
 
-.scroll-container {
-  overflow: auto;
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
-}
-
-.scroll-area {
-  scroll-snap-align: start;
-}
-
-.scroll-container,
-.scroll-area {
-  margin: 0 auto;
-}
-
-.scroll-area {
+.section {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,21 +88,6 @@ a.activeLink {
 }
 
 /*-------------Home Page CSS-------------*/
-.spaceHeader {
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 #text {
   height: 150px;
   width: 100%;
@@ -145,10 +121,13 @@ a.activeLink {
 
 .earth {
   position: relative;
-  top: -400px;
-  left: -250px;
-  width: 250px;
-  height: 250px;
+  background-image: url(/space/images/planet.png);
+  background-size: 100vh;
+  background-repeat: no-repeat;
+  background-position: -500px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
   -webkit-animation-name: floating;
           animation-name: floating;
   -webkit-animation-duration: 2.7s;
@@ -157,6 +136,24 @@ a.activeLink {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
+  -webkit-backface-visibility: hidden;
+}
+
+.spaceHeader {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-left: -50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-backface-visibility: hidden;
 }
 
 @-webkit-keyframes floating {

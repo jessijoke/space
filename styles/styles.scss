@@ -1,12 +1,15 @@
-
+html {
+    scroll-behavior: smooth;
+  }
 
 #mainNavigation {
-    z-index: 1;
+    z-index: 100;
     height: 64px;
     width: 100vw;
-    //padding: 0px 15px 0px 15px;
     position: fixed;
-    background-color: white;
+    background-color: rgba(20, 9, 36, 0.5);
+    background-blend-mode: overlay;
+    //background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -21,7 +24,7 @@
 .navElements {
     width: 60%;
     display: flex;
-    padding-right: 30px;
+    padding-right: 45px;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -29,20 +32,22 @@
 .navElements a {
     font-family: 'Work Sans', sans-serif;
     text-decoration: none;
-    color: #687081;
+    //color: #687081;
+    color: #c308cf;
 }
 
 .navElements a:hover {
-    text-decoration: underline;
-    color: #852e77;
+    color: #8d52e5;
 }
 
 a.activeLink {
-    color: #010e27;
+    color: white;
+    //color: #010e27;
 }
 
 #space {
-    width: 100vw;
+    position: fixed;
+    width: 100%;
     height: 100vh;
     background-image: url("/space/images/background-5.png"),
     url("/space/images/background-4.png"),
@@ -51,30 +56,19 @@ a.activeLink {
     url("/space/images/background-1.png");
     background-repeat: repeat;
     background-position: center;
-    //background-position: 50% 50%;
 }
 
-.scroll-container,
-.scroll-area {
-  max-width: 100vw;
+
+.sections-container,
+.section {
+  width: 100%;
   height: 100vh;
 }
 
-.scroll-container {
-  overflow: auto;
-  scroll-snap-type: y mandatory;
-}
 
-.scroll-area {
-  scroll-snap-align: start;
-}
 
-.scroll-container,
-.scroll-area {
-  margin: 0 auto;
-}
-
-.scroll-area {
+.section {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,23 +78,12 @@ a.activeLink {
 
 /*-------------Home Page CSS-------------*/
 
-.spaceHeader {
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #text {
     height: 150px;
     width: 100%;
     line-height: 150px;
     letter-spacing: 15px;
     text-align: center;
-    //background-color: rgba($color: #a31275, $alpha: .3);
-    //mix-blend-mode: luminosity;
     color: white;
     font-family: 'Work Sans', sans-serif;
     font-size: 40px;
@@ -114,14 +97,30 @@ a.activeLink {
 
 .earth {
     position: relative;
-    top: -400px;
-    left: -250px;
-    width: 250px;
-    height: 250px;
+    background-image: url(/space/images/planet.png);
+    background-size: 100vh;
+    background-repeat: no-repeat;
+    background-position: -500px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    //margin-left: -1250px;
     animation-name: floating;
     animation-duration: 2.7s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+    -webkit-backface-visibility: hidden;
+}
+
+.spaceHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-left: -50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-backface-visibility: hidden;
 }
 
 @keyframes floating {
