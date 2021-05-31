@@ -10,8 +10,8 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/space/styles/reset.css">
-        <link rel="stylesheet" href="/space/styles/styles.css">
+        <link rel="stylesheet" href="/styles/reset.css">
+        <link rel="stylesheet" href="/styles/styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&display=swap" rel="stylesheet">
     </head>
@@ -20,12 +20,12 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <nav id="mainNavigation">
-            <div class="logo"><img src="/space/images/logo.png"></div>
+            <div class="logo"><img src="/images/logo.png"></div>
             <div class="navElements">
                 <div class="navElementInner"><a href="#home" class="activeLink">HOME</a></div>
                 <div class="navElementInner"><a href="#exhibits">EXHIBITS</a></div>
                 <div class="navElementInner"><a href="#tickets">TICKETS</a></div>
-                <div class="navElementInner"><a href="#shows">SHOWS</a></div>
+                <div class="navElementInner"><a href="#movies">MOVIES</a></div>
                 <div class="navElementInner"><a href="#cafe">CAFE</a></div>
             </div>
         </nav>
@@ -42,13 +42,182 @@
                     </div>   
                              
             </div>
-            <div class="section" id="exhibits">exhibits</div>
-            <div class="section" id="tickets">tickets</div>
-            <div class="section" id="shows">shows</div>
-            <div class="section" id="cafe">cafe</div>
+            <div class="section" id="exhibits">
+
+                <nav class="section-navigation exhibit-navigation">
+                    <div class="section-navigation-link">
+                        <button type="button" class="secion-nav-button button1">Explore Exhibits</button>
+                    </div>
+                    <div class="section-navigation-link">
+                        <button type="button" class="secion-nav-button button2">NASA Mars Rover</button>
+                    </div>
+                    <div class="section-navigation-link">
+                        <button type="button" class="secion-nav-button button3">Solar System Puzzle</button>
+                    </div>
+                </nav>
+                <div class="section-content">
+                    <div class="exhibits-container">
+                        <div class="exhibits-form">
+                            <h2>test</h2>
+                        </div>
+                        <div class="exhibits-info-container">
+                            <div class="exhibits-image">
+                                
+                            </div>
+                            <div class="exhibits-description">
+                                <h3>Test</h3>
+
+                                <p>
+                                    Test2
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="section" id="tickets">
+                <nav class="section-navigation exhibit-navigation">
+                    <div class="section-navigation-link">
+                        <button type="button" class="secion-nav-button button1">Museum Tickets</button>
+                    </div>
+                    <div class="section-navigation-link">
+                        <button type="button" class="secion-nav-button button2">View Reservations</button>
+                    </div>
+                </nav>
+                <div class="section-content">
+                    <div class="tickets-container">
+                        <div class="tickets-form">
+                            <h2>Purchase Tickets</h2>
+                            <form>
+                                <label for="fname">Full Name:</label><br>
+                                <input type="text" placeholder="Enter Name"><br>
+                                <label for="fname">Adult Ticket $20.00</label><br>
+                                <input type="number" value="0" id="museumAdult"><br>
+                                <label for="fname">Child Ticket $16.00</label><br>
+                                <input type="number" value="0" id="museumChild"><br>
+                                <label for="fname">Senior Ticket $18.00</label><br>
+                                <input type="number" value="0" id="museumSenior"><br>
+                                <label for="fname">Veteran/Active Military Ticket $17</label><br>
+                                <input type="number" value="0" id="museumVet"><br>
+                                <input type="checkbox" class="checkInput" id="wheelchair" name="wheelchair" value="wheelchair">
+                                <label for="wheelchair">Reserve a wheelchair</label><br>
+                                <input type="checkbox" class="checkInput" id="assistedListening" name="assistedListening" value="assistedListening">
+                                <label for="assistedListening">Reserve an assisted listening device</label><br>
+                                <span class="ticket-total-label">Total: $</span><div id="ticket-total">0</div>
+                                <input type="submit" value="Submit" id="submitButton">
+                            </form>
+                        </div>
+                        <div class="tickets-info-container">
+                            <div class="tickets-image">
+                                
+                            </div>
+                            <div class="tickets-description">
+                                <h3>Plan your journey to the stars!</h3>
+
+                                <p>
+                                    Launch into the history of flight by surrounding yourself with icons of air and space travel. The flagship building on the National Mall in Washington, D.C, exhibits aircraft, spacecraft, missiles, rockets, and other flight-related artifacts. The museum has an IMAX theater for out-of-this-world escapes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="section" id="movies">
+
+                <nav class="section-navigation movies-navigation">
+                    <div class="section-navigation-link">
+                        <button type="button" class="secion-nav-button button1">Movies</button>
+                    </div>
+                    <div class="section-navigation-link">
+                        <button type="button" class="secion-nav-button button2">Movie Tickets</button>
+                    </div>
+                    <div class="section-navigation-link">
+                        <button type="button" class="secion-nav-button button3">View Reservations</button>
+                    </div>
+                </nav>
+                <div class="section-content">
+                    <div class="tickets-container">
+                        <div class="tickets-form">
+                            <h2>Purchase Movie Tickets</h2>
+                            <form>
+                                <label for="fname">Full Name:</label><br>
+                                <input type="text" placeholder="Enter Name"><br>
+                                <label for="fname">Adult Ticket $20.00</label><br>
+                                <input type="number" value="0" id="movieAdult"><br>
+                                <label for="fname">Child Ticket $16.00</label><br>
+                                <input type="number" value="0" id="moviehild"><br>
+                                <label for="fname">Senior Ticket $18.00</label><br>
+                                <input type="number" value="0" id="movieSenior"><br>
+                                <label for="fname">Veteran/Active Military Ticket $17</label><br>
+                                <input type="number" value="0" id="movieVet"><br>
+                                <input type="checkbox" class="checkInput" id="movie1" name="movie1" value="movie1">
+                                <label for="movie1">Movie 1</label><br>
+                                <input type="checkbox" class="checkInput" id="movie2" name="movie2" value="movie2">
+                                <label for="movie2">Movie 2</label><br>
+                                <input type="checkbox" class="checkInput" id="movie3" name="movie3" value="movie3">
+                                <label for="movie3">Movie 2</label><br>
+                                <span class="ticket-total-label">Total: $</span><div id="ticket-total">0</div>
+                                <input type="submit" value="Submit" id="submitButton">
+                            </form>
+                        </div>
+                        <div class="tickets-info-container">
+                            <div class="tickets-image">
+                                
+                            </div>
+                            <div class="tickets-description">
+                                <h3>Plan your journey to the stars!</h3>
+
+                                <p>
+                                    Launch into the history of flight by surrounding yourself with icons of air and space travel. The flagship building on the National Mall in Washington, D.C, exhibits aircraft, spacecraft, missiles, rockets, and other flight-related artifacts. The museum has an IMAX theater for out-of-this-world escapes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="section" id="cafe">
+
+            <nav class="section-navigation cafe-navigation">
+                <div class="section-navigation-link">
+                    <button type="button" class="secion-nav-button button1">Cafe</button>
+                </div>
+                <div class="section-navigation-link">
+                    <button type="button" class="secion-nav-button button2">Purchase Meals</button>
+                </div>
+                <div class="section-navigation-link">
+                    <button type="button" class="secion-nav-button button3">View Reservations</button>
+                </div>
+            </nav>
+            <div class="section-content">
+                <div class="cafe-container">
+                    <div class="cafe-form">
+                        test
+                    </div>
+                    <div class="cafe-info-container">
+                        <div class="cafe-image">
+                            
+                        </div>
+                        <div class="cafe-description">
+                            <h3>Test</h3>
+
+                            <p>
+                                Test2
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <script src="/space/javascripts/javascript.js" async defer></script>
-        <script src="/space/javascripts/home.js" async defer></script>
-        <script src="/space/javascripts/menu.js" async defer></script>
+
+        <script src="/javascripts/javascript.js" async defer></script>
+        <script src="/javascripts/home.js" async defer></script>
+        <script src="/javascripts/menu.js" async defer></script>
+        <script src="/javascripts/totalCalculator.js" async defer></script>
     </body>
 </html>

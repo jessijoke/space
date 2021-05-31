@@ -7,8 +7,6 @@ html {
   height: 64px;
   width: 100vw;
   position: fixed;
-  background-color: rgba(20, 9, 36, 0.5);
-  background-blend-mode: overlay;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,7 +60,7 @@ a.activeLink {
   position: fixed;
   width: 100%;
   height: 100vh;
-  background-image: url("/space/images/background-5.png"), url("/space/images/background-4.png"), url("/space/images/background-3.png"), url("/space/images/background-2.png"), url("/space/images/background-1.png");
+  background-image: url("/images/background-5.png"), url("/images/background-4.png"), url("/images/background-3.png"), url("/images/background-2.png"), url("/images/background-1.png");
   background-repeat: repeat;
   background-position: center;
 }
@@ -71,6 +69,8 @@ a.activeLink {
 .section {
   width: 100%;
   height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .section {
@@ -78,16 +78,30 @@ a.activeLink {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   color: white;
 }
 
 /*-------------Home Page CSS-------------*/
+#home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 #text {
   height: 150px;
   width: 100%;
@@ -121,7 +135,7 @@ a.activeLink {
 
 .earth {
   position: relative;
-  background-image: url(/space/images/planet.png);
+  background-image: url(/images/planet.png);
   background-size: 100vh;
   background-repeat: no-repeat;
   background-position: -500px;
@@ -184,5 +198,202 @@ a.activeLink {
     -webkit-transform: translate(0, 0px);
             transform: translate(0, 0px);
   }
+}
+
+/*-------------Sections CSS-------------*/
+h3 {
+  font-family: 'Work Sans', sans-serif;
+  letter-spacing: 3px;
+}
+
+h2 {
+  font-family: 'Work Sans', sans-serif;
+  letter-spacing: 3px;
+  color: white;
+  font-size: 15px;
+}
+
+p {
+  padding-top: 15px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+}
+
+#exhibits, #tickets, #movies, #cafe {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-top: 200px;
+}
+
+.section-content {
+  padding: 0px 15px 0px 15px;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px 15px 0px 15px;
+  background-color: rgba(5, 0, 5, 0.7);
+  background-blend-mode: color-burn;
+}
+
+.section-navigation {
+  padding: 0px 15px 0px 15px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.section-navigation-link {
+  width: 100%;
+  height: 100%;
+}
+
+button.secion-nav-button {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  padding: 15px 0px 15px 0px;
+  font-family: 'Work Sans', sans-serif;
+  color: white;
+  letter-spacing: 3px;
+}
+
+button.secion-nav-button:hover {
+  color: #8d52e5;
+}
+
+.button1 {
+  background-color: #6d1073;
+}
+
+.button2 {
+  background-color: #5f0865;
+}
+
+.button3 {
+  background-color: #4f0354;
+}
+
+/*-------------Tickets CSS-------------*/
+.tickets-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.tickets-form {
+  width: 50%;
+  height: 100%;
+  padding: 15px 15px 15px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.tickets-info-container {
+  width: 50%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tickets-image {
+  background-image: url("/images/tickets/tickets.png");
+  width: 100%;
+  height: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tickets-description {
+  padding: 15px 15px 15px 15px;
+  background-color: white;
+  color: black;
+  height: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.tickets-form form label {
+  display: inline-block;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+  padding: 15px 0px 0px 0px;
+  margin: 0px;
+}
+
+input {
+  width: 98%;
+  border-radius: 0px;
+  border: none;
+  padding: 5px 0px 5px 0px;
+  margin-top: 5px;
+}
+
+input.checkInput {
+  width: 15px;
+}
+
+input#submitButton {
+  margin-top: 15px;
+  background-color: #8d52e5;
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  letter-spacing: 3px;
+  font-size: 15px;
+}
+
+input#submitButton:hover {
+  background-color: #5f0865;
+  cursor: pointer;
+}
+
+span.ticket-total-label {
+  font-family: 'Work Sans', sans-serif;
+  letter-spacing: 3px;
+  font-size: 15px;
+  display: inline-block;
+  padding-top: 15px;
+}
+
+#ticket-total {
+  font-family: 'Work Sans', sans-serif;
+  letter-spacing: 3px;
+  font-size: 15px;
+  display: inline-block;
+  padding-top: 15px;
 }
 /*# sourceMappingURL=styles.css.map */
