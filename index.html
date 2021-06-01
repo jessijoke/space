@@ -79,13 +79,13 @@
             <div class="section" id="tickets">
                 <nav class="section-navigation exhibit-navigation">
                     <div class="section-navigation-link">
-                        <button type="button" class="secion-nav-button button1">Museum Tickets</button>
+                        <button type="button" class="secion-nav-button button1" id="museumTicketsBtn">Museum Tickets</button>
                     </div>
                     <div class="section-navigation-link">
-                        <button type="button" class="secion-nav-button button2">View Reservations</button>
+                        <button type="button" class="secion-nav-button button2" id="museumReservationsBtn">View Reservations</button>
                     </div>
                 </nav>
-                <div class="section-content">
+                <div class="section-content" id="museumTicketSection">
                     <div class="tickets-container">
                         <div class="tickets-form">
                             <h2>Purchase Tickets</h2>
@@ -122,23 +122,28 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="section-content inactive" id="museumReservationSection">
+                    Testing Section
+                </div>
             </div>
 
             <div class="section" id="movies">
 
                 <nav class="section-navigation movies-navigation">
                     <div class="section-navigation-link">
-                        <button type="button" class="secion-nav-button button1">Movies</button>
+                        <button type="button" class="secion-nav-button button1" id="movieOptionsBtn">Movies</button>
                     </div>
                     <div class="section-navigation-link">
-                        <button type="button" class="secion-nav-button button2">Movie Tickets</button>
+                        <button type="button" class="secion-nav-button button2" id="movieTicketsBtn">Movie Tickets</button>
                     </div>
                     <div class="section-navigation-link">
-                        <button type="button" class="secion-nav-button button3">View Reservations</button>
+                        <button type="button" class="secion-nav-button button3" id="movieReservationsBtn">View Reservations</button>
                     </div>
                 </nav>
-                <div class="section-content">
+                <div class="section-content" id="movieOptionSection">
+                    Movie Options
+                </div>
+                <div class="section-content inactive" id="movieTicketSection">
                     <div class="tickets-container">
                         <div class="tickets-form">
                             <h2>Purchase Movie Tickets</h2>
@@ -148,7 +153,7 @@
                                 <label for="fname">Adult Ticket $20.00</label><br>
                                 <input type="number" value="0" id="movieAdult"><br>
                                 <label for="fname">Child Ticket $16.00</label><br>
-                                <input type="number" value="0" id="moviehild"><br>
+                                <input type="number" value="0" id="movieChild"><br>
                                 <label for="fname">Senior Ticket $18.00</label><br>
                                 <input type="number" value="0" id="movieSenior"><br>
                                 <label for="fname">Veteran/Active Military Ticket $17</label><br>
@@ -159,7 +164,7 @@
                                 <label for="movie2">Movie 2</label><br>
                                 <input type="checkbox" class="checkInput" id="movie3" name="movie3" value="movie3">
                                 <label for="movie3">Movie 2</label><br>
-                                <span class="ticket-total-label">Total: $</span><div id="ticket-total">0</div>
+                                <span class="movie-total-label">Total: $</span><div id="movie-total">0</div>
                                 <input type="submit" value="Submit" id="submitButton">
                             </form>
                         </div>
@@ -177,7 +182,9 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="section-content inactive" id="movieReservationSection">
+                    Movie Reservations
+                </div>
             </div>
 
             <div class="section" id="cafe">
@@ -218,6 +225,7 @@
         <script src="/space/javascripts/javascript.js" async defer></script>
         <script src="/space/javascripts/home.js" async defer></script>
         <script src="/space/javascripts/menu.js" async defer></script>
+        <script src="/space/javascripts/submenus.js" async defer></script>
         <script src="/space/javascripts/totalCalculator.js" async defer></script>
     </body>
 </html>

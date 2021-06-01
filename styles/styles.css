@@ -201,6 +201,10 @@ a.activeLink {
 }
 
 /*-------------Sections CSS-------------*/
+.inactive {
+  display: none !important;
+}
+
 h3 {
   font-family: 'Work Sans', sans-serif;
   letter-spacing: 3px;
@@ -224,6 +228,7 @@ p {
       -ms-flex-align: end;
           align-items: flex-end;
   padding-top: 200px;
+  margin: 0px 15px 0px 15px;
 }
 
 .section-content {

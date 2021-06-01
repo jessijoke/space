@@ -1,47 +1,50 @@
 let museumTicketTotal = document.querySelector("#ticket-total");
+let movieTicketTotal = document.querySelector("#movie-total");
 
 const calculateTotal = (a, b, c, d) => ((parseInt(a) * 20) + (parseInt(b) * 16) + (parseInt(c) * 18) + (parseInt(d) * 17));
 
 document.addEventListener("keyup", event => {
-    let museumAdultQty = document.querySelector('#museumAdult').value;
-    let museumChildQty = document.querySelector('#museumChild').value;
-    let museumSeniorQty = document.querySelector('#museumSenior').value;
-    let museumVetQty = document.querySelector('#museumVet').value;
-    if (museumAdultQty < 0) {
-        document.querySelector('#museumAdult').value = 0;
-        museumAdultQty = 0;
-    } else if (museumChildQty < 0) {
-        document.querySelector('#museumChild').value = 0;
-        museumChildQty = 0;
-    } else if (museumSeniorQty < 0) {
-        document.querySelector('#museumSenior').value = 0;
-        museumSeniorQty = 0;
-    } else if (museumVetQty < 0) {
-        document.querySelector('#museumVet').value = 0;
-        museumVetQty = 0;
-    }
-    museumTicketTotal.innerHTML = calculateTotal(museumAdultQty, museumChildQty, museumSeniorQty, museumVetQty).toString();
+    let museumAdultQty = document.querySelector('#museumAdult');
+    let museumChildQty = document.querySelector('#museumChild');
+    let museumSeniorQty = document.querySelector('#museumSenior');
+    let museumVetQty = document.querySelector('#museumVet');
+    let movieAdultQty = document.querySelector('#movieAdult');
+    let movieChildQty = document.querySelector('#movieChild');
+    let movieSeniorQty = document.querySelector('#movieSenior');
+    let movieVetQty = document.querySelector('#movieVet');
+
+    let allInputQtys = [museumAdultQty, museumChildQty, museumSeniorQty, museumVetQty, movieAdultQty, movieChildQty, movieSeniorQty, movieVetQty];
+
+    allInputQtys.forEach((inputQty) => {
+        if (inputQty.value < 0) {
+            inputQty.value = 0;
+        }  
+    });
+
+    museumTicketTotal.innerHTML = calculateTotal(museumAdultQty.value, museumChildQty.value, museumSeniorQty.value, museumVetQty.value).toString();
+    movieTicketTotal.innerHTML = calculateTotal(movieAdultQty.value, movieChildQty.value, movieSeniorQty.value, movieVetQty.value).toString();
   });
 
   document.addEventListener("click", event => {
-    let museumAdultQty = document.querySelector('#museumAdult').value;
-    let museumChildQty = document.querySelector('#museumChild').value;
-    let museumSeniorQty = document.querySelector('#museumSenior').value;
-    let museumVetQty = document.querySelector('#museumVet').value;
-    if (museumAdultQty < 0) {
-        document.querySelector('#museumAdult').value = 0;
-        museumAdultQty = 0;
-    } else if (museumChildQty < 0) {
-        document.querySelector('#museumChild').value = 0;
-        museumChildQty = 0;
-    } else if (museumSeniorQty < 0) {
-        document.querySelector('#museumSenior').value = 0;
-        museumSeniorQty = 0;
-    } else if (museumVetQty < 0) {
-        document.querySelector('#museumVet').value = 0;
-        museumVetQty = 0;
-    }
-    museumTicketTotal.innerHTML = calculateTotal(museumAdultQty, museumChildQty, museumSeniorQty, museumVetQty).toString();
+    let museumAdultQty = document.querySelector('#museumAdult');
+    let museumChildQty = document.querySelector('#museumChild');
+    let museumSeniorQty = document.querySelector('#museumSenior');
+    let museumVetQty = document.querySelector('#museumVet');
+    let movieAdultQty = document.querySelector('#movieAdult');
+    let movieChildQty = document.querySelector('#movieChild');
+    let movieSeniorQty = document.querySelector('#movieSenior');
+    let movieVetQty = document.querySelector('#movieVet');
+
+    let allInputQtys = [museumAdultQty, museumChildQty, museumSeniorQty, museumVetQty, movieAdultQty, movieChildQty, movieSeniorQty, movieVetQty];
+
+    allInputQtys.forEach((inputQty) => {
+        if (inputQty.value < 0) {
+            inputQty.value = 0;
+        }  
+    });
+
+    museumTicketTotal.innerHTML = calculateTotal(museumAdultQty.value, museumChildQty.value, museumSeniorQty.value, museumVetQty.value).toString();
+    movieTicketTotal.innerHTML = calculateTotal(movieAdultQty.value, movieChildQty.value, movieSeniorQty.value, movieVetQty.value).toString();
   });
 
   
