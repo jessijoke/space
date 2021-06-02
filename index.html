@@ -46,35 +46,30 @@
 
                 <nav class="section-navigation exhibit-navigation">
                     <div class="section-navigation-link">
-                        <button type="button" class="secion-nav-button button1">Explore Exhibits</button>
+                        <button type="button" class="secion-nav-button button1" id="exhibitsExploreBtn">Explore Exhibits</button>
                     </div>
                     <div class="section-navigation-link">
-                        <button type="button" class="secion-nav-button button2">NASA Mars Rover</button>
+                        <button type="button" class="secion-nav-button button2" id="exhibitsNASABtn">NASA Mars Rover</button>
                     </div>
                     <div class="section-navigation-link">
-                        <button type="button" class="secion-nav-button button3">Solar System Puzzle</button>
+                        <button type="button" class="secion-nav-button button3" id="exhibitsPuzzleBtn">Solar System Puzzle</button>
                     </div>
                 </nav>
-                <div class="section-content">
+                <div class="section-content" id="exhibitsExploreSection">
                     <div class="exhibits-container">
                         <div class="exhibits-form">
-                            <h2>test</h2>
-                        </div>
-                        <div class="exhibits-info-container">
-                            <div class="exhibits-image">
-                                
-                            </div>
-                            <div class="exhibits-description">
-                                <h3>Test</h3>
-
-                                <p>
-                                    Test2
-                                </p>
-                            </div>
+                            <h2>Exhibits</h2>
                         </div>
                     </div>
                 </div>
 
+                <div class="section-content inactive" id="exhibitsNASASection">
+                    NASA
+                </div>
+
+                <div class="section-content inactive" id="exhibitsPuzzleSection">
+                    Puzzle
+                </div>
             </div>
             <div class="section" id="tickets">
                 <nav class="section-navigation exhibit-navigation">
@@ -150,13 +145,13 @@
                             <form>
                                 <label for="fname">Full Name:</label><br>
                                 <input type="text" placeholder="Enter Name"><br>
-                                <label for="fname">Adult Ticket $20.00</label><br>
+                                <label for="fname">Adult Ticket $10.00</label><br>
                                 <input type="number" value="0" id="movieAdult"><br>
-                                <label for="fname">Child Ticket $16.00</label><br>
+                                <label for="fname">Child Ticket $5.00</label><br>
                                 <input type="number" value="0" id="movieChild"><br>
-                                <label for="fname">Senior Ticket $18.00</label><br>
+                                <label for="fname">Senior Ticket $8.00</label><br>
                                 <input type="number" value="0" id="movieSenior"><br>
-                                <label for="fname">Veteran/Active Military Ticket $17</label><br>
+                                <label for="fname">Veteran/Active Military Ticket $7</label><br>
                                 <input type="number" value="0" id="movieVet"><br>
                                 <input type="checkbox" class="checkInput" id="movie1" name="movie1" value="movie1">
                                 <label for="movie1">Movie 1</label><br>
@@ -191,35 +186,66 @@
 
             <nav class="section-navigation cafe-navigation">
                 <div class="section-navigation-link">
-                    <button type="button" class="secion-nav-button button1">Cafe</button>
+                    <button type="button" class="secion-nav-button button1" id="cafeOptionsBtn">Cafe</button>
                 </div>
                 <div class="section-navigation-link">
-                    <button type="button" class="secion-nav-button button2">Purchase Meals</button>
+                    <button type="button" class="secion-nav-button button2" id="cafePurchaseBtn">Purchase Meals</button>
                 </div>
                 <div class="section-navigation-link">
-                    <button type="button" class="secion-nav-button button3">View Reservations</button>
+                    <button type="button" class="secion-nav-button button3" id="cafeReservationsBtn">View Reservations</button>
                 </div>
             </nav>
-            <div class="section-content">
+            <div class="section-content" id="cafeOptionsSection">
                 <div class="cafe-container">
                     <div class="cafe-form">
-                        test
+                        Options
                     </div>
-                    <div class="cafe-info-container">
-                        <div class="cafe-image">
+                </div>
+            </div>
+
+            <div class="section-content inactive" id="cafePurchaseSection">
+                <div class="tickets-container">
+                    <div class="tickets-form">
+                        <h2>Purchase Meal Tickets</h2>
+                        <form>
+                            <label for="fname">Full Name:</label><br>
+                            <input type="text" placeholder="Enter Name"><br>
+                            <label for="fname">Adult Meal $12.00</label><br>
+                            <input type="number" value="0" id="cafeAdult"><br>
+                            <label for="fname">Child Meal $8.00</label><br>
+                            <input type="number" value="0" id="cafeChild"><br>
+                            <label for="fname">Senior Meal $9.00</label><br>
+                            <input type="number" value="0" id="cafeSenior"><br>
+                            <label for="fname">Veteran/Active Military Meal $10</label><br>
+                            <input type="number" value="0" id="cafeVet"><br>
+                            <input type="checkbox" class="checkInput" id="movie1" name="movie1" value="movie1">
+                            <label for="movie1">Movie 1</label><br>
+                            <input type="checkbox" class="checkInput" id="movie2" name="movie2" value="movie2">
+                            <label for="movie2">Movie 2</label><br>
+                            <input type="checkbox" class="checkInput" id="movie3" name="movie3" value="movie3">
+                            <label for="movie3">Movie 2</label><br>
+                            <span class="cafe-total-label">Total: $</span><div id="cafe-total">0</div>
+                            <input type="submit" value="Submit" id="submitButton">
+                        </form>
+                    </div>
+                    <div class="tickets-info-container">
+                        <div class="tickets-image">
                             
                         </div>
-                        <div class="cafe-description">
-                            <h3>Test</h3>
+                        <div class="tickets-description">
+                            <h3>Plan your journey to the stars!</h3>
 
                             <p>
-                                Test2
+                                Launch into the history of flight by surrounding yourself with icons of air and space travel. The flagship building on the National Mall in Washington, D.C, exhibits aircraft, spacecraft, missiles, rockets, and other flight-related artifacts. The museum has an IMAX theater for out-of-this-world escapes.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div class="section-content inactive" id="cafeReservationsSection">
+                Reservations
+            </div>
         </div>
 
         <script src="/space/javascripts/javascript.js" async defer></script>

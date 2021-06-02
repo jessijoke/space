@@ -54,3 +54,71 @@ museumTicketsBtn.addEventListener("click", () => {
         movieReservationSection.classList.remove('inactive');
     }
  }, false);
+
+ let exhibitsExploreBtn = document.querySelector("#exhibitsExploreBtn");
+ let exhibitsNASABtn = document.querySelector("#exhibitsNASABtn");
+ let exhibitsPuzzleBtn = document.querySelector("#exhibitsPuzzleBtn");
+ let exhibitsExploreSection = document.querySelector("#exhibitsExploreSection");
+ let exhibitsNASASection = document.querySelector("#exhibitsNASASection");
+ let exhibitsPuzzleSection = document.querySelector("#exhibitsPuzzleSection");
+
+ exhibitsExploreBtn.addEventListener("click", () => { 
+    if (exhibitsExploreSection.classList.contains('inactive')) {
+        console.log('test');
+        exhibitsExploreSection.classList.remove('inactive');
+        exhibitsNASASection.classList.add('inactive');
+        exhibitsPuzzleSection.classList.add('inactive');
+    }
+ }, false);
+
+ exhibitsNASABtn.addEventListener("click", () => { 
+    if (exhibitsNASASection.classList.contains('inactive')) {
+        console.log('click');
+        exhibitsExploreSection.classList.add('inactive');
+        exhibitsNASASection.classList.remove('inactive');
+        exhibitsPuzzleSection.classList.add('inactive');
+    }
+ }, false);
+
+ exhibitsPuzzleBtn.addEventListener("click", () => { 
+    if (exhibitsPuzzleSection.classList.contains('inactive')) {
+        console.log('click');
+        exhibitsExploreSection.classList.add('inactive');
+        exhibitsNASASection.classList.add('inactive');
+        exhibitsPuzzleSection.classList.remove('inactive');
+    }
+ }, false);
+
+ let cafeOptionsBtn = document.querySelector("#cafeOptionsBtn");
+ let cafePurchaseBtn = document.querySelector("#cafePurchaseBtn");
+ let cafeReservationsBtn = document.querySelector("#cafeReservationsBtn");
+ let cafeOptionsSection = document.querySelector("#cafeOptionsSection");
+ let cafePurchaseSection = document.querySelector("#cafePurchaseSection");
+ let cafeReservationsSection = document.querySelector("#cafeReservationsSection");
+
+ cafeOptionsBtn.addEventListener("click", () => { 
+    if (cafeOptionsSection.classList.contains('inactive')) {
+        console.log('test');
+        cafeOptionsSection.classList.remove('inactive');
+        cafePurchaseSection.classList.add('inactive');
+        cafeReservationsSection.classList.add('inactive');
+    }
+ }, false);
+
+ cafePurchaseBtn.addEventListener("click", () => { 
+    if (cafePurchaseSection.classList.contains('inactive')) {
+        console.log('click');
+        cafeOptionsSection.classList.add('inactive');
+        cafePurchaseSection.classList.remove('inactive');
+        cafeReservationsSection.classList.add('inactive');
+    }
+ }, false);
+
+ cafeReservationsBtn.addEventListener("click", () => { 
+    if (cafeReservationsSection.classList.contains('inactive')) {
+        console.log('click');
+        cafeOptionsSection.classList.add('inactive');
+        cafePurchaseSection.classList.add('inactive');
+        cafeReservationsSection.classList.remove('inactive');
+    }
+ }, false);
