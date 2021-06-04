@@ -29,10 +29,12 @@ html {
 
 .navElements {
   width: 60%;
+  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding-right: 45px;
+  padding-left: 75px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -40,20 +42,27 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-image: url("/space/images/navbar.png");
+  background-size: cover;
+  background-position: bottom left;
+}
+
+.navElementInner {
+  padding-top: 48px;
 }
 
 .navElements a {
   font-family: 'Work Sans', sans-serif;
   text-decoration: none;
-  color: #c308cf;
+  color: black;
 }
 
 .navElements a:hover {
-  color: #8d52e5;
+  color: #ff0060;
 }
 
 a.activeLink {
-  color: white;
+  color: #002aff;
 }
 
 #space {
@@ -200,6 +209,51 @@ a.activeLink {
   }
 }
 
+.videoContainer {
+  height: 100%;
+  width: 100%;
+  /*
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    */
+  /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.embed-responsive {
+  margin-left: -100%;
+  text-align: center;
+  position: absolute;
+  left: 120%;
+  right: 0;
+  top: 50%;
+  margin-top: -18.1%;
+  padding-bottom: 42%;
+  height: 0;
+  overflow: hidden;
+  /*
+      display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    height: 70%;
+    */
+}
+
+.embed-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+}
+
 /*-------------Sections CSS-------------*/
 .inactive {
   display: none !important;
@@ -333,7 +387,7 @@ button.secion-nav-button:hover {
 }
 
 .tickets-image {
-  background-image: url("/space/images/tickets/tickets.png");
+  background-image: url("/space/space/images/tickets/tickets.png");
   width: 100%;
   height: 50%;
   -webkit-box-sizing: border-box;
