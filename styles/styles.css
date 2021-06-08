@@ -97,7 +97,7 @@ a.activeLink {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  color: black;
+  color: white;
 }
 
 /*-------------Home Page CSS-------------*/

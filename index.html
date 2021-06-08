@@ -89,9 +89,9 @@
                     <div class="tickets-container">
                         <div class="tickets-form">
                             <h2>Purchase Tickets</h2>
-                            <form>
+                            <form name="ticketReservations">
                                 <label for="fname">Full Name:</label><br>
-                                <input type="text" placeholder="Enter Name"><br>
+                                <input type="text" placeholder="Enter Name" id="ticketReservationName"><br>
                                 <label for="fname">Adult Ticket $20.00</label><br>
                                 <input type="number" value="0" id="museumAdult"><br>
                                 <label for="fname">Child Ticket $16.00</label><br>
@@ -253,11 +253,12 @@
             </div>
         </div>
 
-        
+        <script src="javascripts/global.js" async defer></script>
         <script src="javascripts/home.js" async defer></script>
         <script src="javascripts/menu.js" async defer></script>
         <script src="javascripts/submenus.js" async defer></script>
         <script src="javascripts/totalCalculator.js" async defer></script>
+        <script src="javascripts/ticketReservationsAPI.js" async defer></script>
         <script src="javascripts/javascript.js" async defer></script>
     </body>
 </html>
