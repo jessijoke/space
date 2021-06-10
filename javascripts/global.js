@@ -7,3 +7,5 @@ let trWheelchair = document.querySelector("#wheelchair");
 let trAdl = document.querySelector("#assistedListening");
 let trTotal = document.querySelector("#ticket-total");
 
+let lookupResNumber = document.querySelector('#ticketReservationNumber');
+let lookupResResult = document.querySelector('#lookUpResResult');

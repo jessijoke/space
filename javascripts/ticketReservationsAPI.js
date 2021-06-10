@@ -28,9 +28,41 @@ class TicketReservationAPI {
           .then(resp => resp.json())
     }
 
+    static displayReservation(data) {
+        //console.log(data.data[0].attributes.name)
+        document.getElementById('lookUpResResult').innerHTML = "";
+        console.log(data)
+        const nameDiv = document.createElement('div');
+        nameDiv.innerHTML = `Name: ${data.data[0].attributes.name}`;
+        document.getElementById('lookUpResResult').appendChild(nameDiv);
+        const ticketsDiv = document.createElement('div');
+        ticketsDiv.innerHTML = `Tickets Purchased: ${data.data[0].relationships.tickets.data.length}`;
+        document.getElementById('lookUpResResult').appendChild(ticketsDiv);
+        const accessDiv = document.createElement('div');
+        if (data.data[0].attributes.wheelchair == 1 && data.data[0].attributes.ald == 1) {
+            accessDiv.innerHTML = `You reserved a Wheelchair and an Assisted Listening Device.`;
+            document.getElementById('lookUpResResult').appendChild(accessDiv);
+        } else if (data.data[0].attributes.wheelchair == 1 && data.data[0].attributes.ald == 0) {
+            accessDiv.innerHTML = `You reserved a Wheelchair.`;
+            document.getElementById('lookUpResResult').appendChild(accessDiv);
+        } else if (data.data[0].attributes.wheelchair == 0 && data.data[0].attributes.ald == 1) {
+            accessDiv.innerHTML = `You reserved an Assisted Listening Device.`;
+            document.getElementById('lookUpResResult').appendChild(accessDiv);
+        }
+    }
+
     static getReservation(){
+        let reservationIdLookup = lookupResNumber.value;
+
+        fetch(`http://localhost:3000/reservations/search/${reservationIdLookup}`)
+        .then(response => response.json()) 
+        //.then(json => console.log(json))
+        .then(json => this.displayReservation(json))  
+        .catch(err => console.log('Request Failed', err)); 
 
     }
+
+    
 
 }
 
