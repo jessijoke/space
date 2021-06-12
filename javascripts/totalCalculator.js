@@ -1,8 +1,3 @@
-let museumTicketTotal = document.querySelector("#ticket-total");
-let movieTicketTotal = document.querySelector("#movie-total");
-let cafeTicketTotal = document.querySelector("#cafe-total");
-
-
 const calculateTotal = (a, int1, b, int2, c, int3, d, int4) => ((parseInt(a) * int1) + (parseInt(b) * int2) + (parseInt(c) * int3) + (parseInt(d) * int4));
 
 document.addEventListener("keyup", event => {
