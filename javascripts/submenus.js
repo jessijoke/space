@@ -96,6 +96,20 @@ museumTicketsBtn.addEventListener("click", () => {
  let cafePurchaseSection = document.querySelector("#cafePurchaseSection");
  let cafeReservationsSection = document.querySelector("#cafeReservationsSection");
 
+
+
+ exhibitsMenuBtn.addEventListener("mouseover", (e) => {
+    exhibitSubmenu.style.display = "block";
+ })
+
+ exhibitSubmenu.addEventListener("mouseover", (e) => {
+    exhibitSubmenu.style.display = "block";
+ })
+
+ exhibitsMenuBtn.addEventListener("mouseout", (e) => {
+    exhibitSubmenu.style.display = "none";
+ })
+
  cafeOptionsBtn.addEventListener("click", () => { 
     if (cafeOptionsSection.classList.contains('inactive')) {
         console.log('test');

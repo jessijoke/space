@@ -18,3 +18,7 @@ let lookupResResult = document.querySelector('#lookUpResResult');
 let museumTicketTotal = document.querySelector("#ticket-total");
 let movieTicketTotal = document.querySelector("#movie-total");
 let cafeTicketTotal = document.querySelector("#cafe-total");
+
+//Navigation Submenu
+let exhibitsMenuBtn = document.querySelector("#exhibitsMenu");
+let exhibitSubmenu = document.querySelector("#submenuExhibits");
