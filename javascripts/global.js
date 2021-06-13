@@ -22,3 +22,6 @@ let cafeTicketTotal = document.querySelector("#cafe-total");
 //Navigation Submenu
 let exhibitsMenuBtn = document.querySelector("#exhibitsMenu");
 let exhibitSubmenu = document.querySelector("#submenuExhibits");
+
+let ticketsMenuBtn = document.querySelector("#ticketsMenu");
+let ticketsSubmenu = document.querySelector("#submenuTickets");

@@ -12,6 +12,20 @@ let museumReservationsBtn = document.querySelector("#museumReservationsBtn");
 let museumTicketSection = document.querySelector("#museumTicketSection");
 let museumReservationsSection = document.querySelector("#museumReservationSection");
 
+
+ticketsMenuBtn.addEventListener("mouseover", (e) => {
+    ticketsSubmenu.style.display = "block";
+ })
+
+ ticketsSubmenu.addEventListener("mouseover", (e) => {
+    ticketsSubmenu.style.display = "block";
+ })
+
+ ticketsMenuBtn.addEventListener("mouseout", (e) => {
+    ticketsSubmenu.style.display = "none";
+ })
+
+/*
 museumTicketsBtn.addEventListener("click", () => { 
     if (museumTicketSection.classList.contains('inactive')) {
         console.log('test');
@@ -27,13 +41,14 @@ museumTicketsBtn.addEventListener("click", () => {
         museumReservationsSection.classList.remove('inactive');
     }
  }, false);
-
+*/
  let movieOptionsBtn = document.querySelector("#movieOptionsBtn");
  let movieTicketsBtn = document.querySelector("#movieTicketsBtn");
  let movieReservationsBtn = document.querySelector("#movieReservationsBtn");
  let movieOptionSection = document.querySelector("#movieOptionSection");
  let movieTicketSection = document.querySelector("#movieTicketSection");
  let movieReservationSection = document.querySelector("#movieReservationSection");
+
 
  movieOptionsBtn.addEventListener("click", () => { 
     if (movieOptionSection.classList.contains('inactive')) {

@@ -39,7 +39,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="navElementInner"><a href="#tickets" class="ticketsLink">TICKETS ▼</a></div>
+                <div class="navElementInner" id="ticketsMenu"><a href="#tickets" class="ticketsLink">TICKETS ▼</a>
+                    <div class="navSubmenu" id="submenuTickets">
+                        <div>
+                            <button type="button" class="secion-nav-button navElementInner" id="exhibitsExploreBtn"><a href="#tickets" class="ticketsLink">Tickets</a></button>
+                        </div>
+                        <div>
+                            <button type="button" class="secion-nav-button navElementInner" id="ticketReservationsBtn"><a href="#ticketReservations" class="navTicketRes">View Reservations</a></button>
+                        </div>
+                    </div>
+                </div>
                 <div class="navElementInner"><a href="#movies" class="moviesLink">MOVIES ▼</a></div>
                 <div class="navElementInner"><a href="#cafe" class="cafeLink">CAFE ▼</a></div>
             </div>
@@ -139,14 +148,6 @@
             <!------------------Tickets---------------------------------------->
 
             <div class="section" id="tickets">
-                <nav class="section-navigation exhibit-navigation">
-                    <div class="section-navigation-link">
-                        <button type="button" class="secion-nav-button button1" id="museumTicketsBtn">Museum Tickets</button>
-                    </div>
-                    <div class="section-navigation-link">
-                        <button type="button" class="secion-nav-button button2" id="museumReservationsBtn">View Reservations</button>
-                    </div>
-                </nav>
                 <div class="section-content" id="museumTicketSection">
                     <div class="tickets-container">
                         <div class="tickets-form">
@@ -185,7 +186,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="section-content inactive" id="museumReservationSection">
+            </div>
+
+            <!------------------Ticket Reservations---------------------------------------->
+
+            <div class="section" id="ticketReservations"> 
+                
+                <div class="section-content" id="museumReservationSection">
                     <form name="lockupReservation">
                         <label for="freservation">Ticket Reservation Number:</label><br>
                         <input type="text" placeholder="Enter Reservation Number" id="ticketReservationNumber">
@@ -193,6 +200,7 @@
                     </form>
                     <div id="lookUpResResult"></div>
                 </div>
+
             </div>
 
             <!------------------Movies---------------------------------------->

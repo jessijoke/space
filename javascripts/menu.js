@@ -8,6 +8,7 @@ let moviesSection = document.querySelector("#movies");
 let cafeSection = document.querySelector("#cafe");
 let NASASection = document.querySelector("#NASA");
 let puzzleSection = document.querySelector("#exhibitsPuzzle");
+let ticketReservations = document.querySelector("#ticketReservations");
 
 let currentActiveMenuSection = document.querySelector(".activeSection");
 
@@ -39,6 +40,9 @@ allNavButtons.forEach(navButton => navButton.addEventListener('click', (e) => {
         } else if (e.target.classList.contains('navPuzzle')) {
             currentActiveMenuSection.classList.remove('activeSection');
             puzzleSection.classList.add('activeSection');
+        } else if (e.target.classList.contains('navTicketRes')) {
+            currentActiveMenuSection.classList.remove('activeSection');
+            ticketReservations.classList.add('activeSection');
         }
 
     }
