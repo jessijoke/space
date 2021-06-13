@@ -230,7 +230,7 @@ p {
 #exhibits, #tickets, #movies, #cafe, #NASA, #exhibitsPuzzle {
     align-items: flex-end;
     margin-top: 200px;
-    background-color:white;
+    //background-color:white;
 }
 
 .section-content {
@@ -290,6 +290,95 @@ button.secion-nav-button:hover {
 .button3 {
     background-color: #4f0354;
 }
+
+/*-------------Exhibits CSS------------*/
+
+.exhibits-container {
+    padding: 0px 15px 0px 15px;
+    width: 100%;
+}
+
+.exhibitsFlexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.exhibitTitleFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+}
+
+.exhibitTitle {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 15px;
+    padding: 15px 15px 15px 15px;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 40px;
+    padding-bottom: 40px;
+    color: white;
+    text-align: center;
+}
+
+.aircraft {
+    height: 250px;
+    width: 350px;
+    background-image: url('../images/exhibits/aircraft.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.airSpaceUniforms {
+    height: 250px;
+    width: 350px;
+    background-image: url('../images/exhibits/airandspaceuniforms.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.planetarium {
+    height: 250px;
+    width: 350px;
+    background-image: url('../images/exhibits/planetarium.jpg');
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.satelites {
+    height: 250px;
+    width: 350px;
+    background-image: url('../images/exhibits/satelites.jpg');
+    background-size: cover;
+    background-position: center 40%;
+}
+
+.theGlassWorld {
+    height: 250px;
+    width: 350px;
+    background-image: url('../images/exhibits/theworld.jpg');
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.buildingASpaceship {
+    height: 250px;
+    width: 350px;
+    background-image: url('../images/exhibits/relics.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
 
 /*-------------Tickets CSS-------------*/
 
