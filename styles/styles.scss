@@ -57,7 +57,7 @@ a.activeLink {
 #space {
     position: fixed;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url("../images/background-5.png"),
     url("../images/background-4.png"),
     url("../images/background-3.png"),
@@ -227,7 +227,7 @@ p {
     font-size: 15px;
 }
 
-#exhibits, #tickets, #movies, #cafe, #NASA, #exhibitsPuzzle {
+#exhibits, #tickets, #movies, #cafe, #NASA, #exhibitsPuzzle, #cafeTickets, #cafeReservations, #movieReservations, #movieTickets, #movieReservations {
     align-items: flex-end;
     margin-top: 200px;
     //background-color:white;
@@ -331,48 +331,48 @@ h1 {
 }
 
 .aircraft {
-    height: 250px;
-    width: 350px;
+    height: 30vh;
+    width: 30vw;
     background-image: url('../images/exhibits/aircraft.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .airSpaceUniforms {
-    height: 250px;
-    width: 350px;
+    height: 30vh;
+    width: 30vw;
     background-image: url('../images/exhibits/airandspaceuniforms.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .planetarium {
-    height: 250px;
-    width: 350px;
+    height: 30vh;
+    width: 30vw;
     background-image: url('../images/exhibits/planetarium.jpg');
     background-size: cover;
     background-position: center bottom;
 }
 
 .satelites {
-    height: 250px;
-    width: 350px;
+    height: 30vh;
+    width: 30vw;
     background-image: url('../images/exhibits/satelites.jpg');
     background-size: cover;
     background-position: center 40%;
 }
 
 .theGlassWorld {
-    height: 250px;
-    width: 350px;
+    height: 30vh;
+    width: 30vw;
     background-image: url('../images/exhibits/theworld.jpg');
     background-size: cover;
     background-position: center bottom;
 }
 
 .buildingASpaceship {
-    height: 250px;
-    width: 350px;
+    height: 30vh;
+    width: 30vw;
     background-image: url('../images/exhibits/relics.jpg');
     background-size: cover;
     background-position: center;
@@ -384,19 +384,26 @@ h1 {
 
 .tickets-container {
     height: 100%;
+    width: 75%;
     display: flex;
+    justify-content: center;
     flex-direction: row;
+    background-color: rgb(239, 239, 239);
 }
 
 .tickets-form {
-    width: 50%;
+    width: 75%;
     height: 100%;
     padding: 15px 15px 15px 15px;
     box-sizing: border-box;
 }
 
+.tickets-form h1 {
+    color: black;
+}
+
 .tickets-info-container {
-    width: 50%;
+    width: 100%;
     height: 100%;
     box-sizing: border-box;
     display: flex;
@@ -424,15 +431,15 @@ h1 {
 .tickets-form form label {
     display: inline-block;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 15px;
+    font-size: 18px;
     padding: 15px 0px 0px 0px;
     margin: 0px;
 }
 
 input {
     width: 98%;
-    border-radius: 0px;
-    border: none;
+    border-radius: 1px;
+    border: inset;
     padding: 5px 0px 5px 0px;
     margin-top: 5px;
 }
@@ -450,12 +457,22 @@ input#submitButton {
     font-size: 15px;
 }
 
+input.submitButtonStyle {
+    border: none;
+    margin-top: 15px;
+    background-color: #8d52e5;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: 3px;
+    font-size: 15px;
+}
+
 input#submitButton:hover {
     background-color: #5f0865;
     cursor: pointer;
 }
 
-span.ticket-total-label {
+span.ticket-total-label, span.movie-total-label, .movie-total {
     font-family: 'Work Sans', sans-serif;
     letter-spacing: 3px;
     font-size: 15px;
@@ -469,4 +486,44 @@ span.ticket-total-label {
     font-size: 15px;
     display: inline-block;
     padding-top: 15px;
+}
+
+//----------Ticket Reservations-----------//
+
+.ticketResFlexbox {
+    margin-top: 250px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+//---------Movies --------------------------//
+
+#movieReservationSection {
+    margin-top: 0px;
+}
+
+.theYearOfPluto {
+    height: 350px;
+    width: 250px;
+    background-image: url('../images/movies/the-year-of-pluto.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.journeyOfApollo {
+    height: 350px;
+    width: 250px;
+    background-image: url('../images/movies/journey-of-apollo.jpg');
+    background-size: cover;
+    background-position: center top;
+}
+
+.theSpaceShuttle {
+    height: 350px;
+    width: 250px;
+    background-image: url('../images/movies/the-space-shuttle.jpg');
+    background-size: cover;
+    background-position: center;
 }

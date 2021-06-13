@@ -49,8 +49,32 @@
                         </div>
                     </div>
                 </div>
-                <div class="navElementInner"><a href="#movies" class="moviesLink">MOVIES ▼</a></div>
-                <div class="navElementInner"><a href="#cafe" class="cafeLink">CAFE ▼</a></div>
+                <div class="navElementInner" id="moviesMenu"><a href="#movies" class="moviesLink">MOVIES ▼</a>
+                    <div class="navSubmenu" id="submenuMovies">
+                        <div>
+                            <button type="button" class="secion-nav-button navElementInner" id="moviesExploreBtn"><a href="#movies" class="moviesLink">Movies</a></button>
+                        </div>
+                        <div>
+                            <button type="button" class="secion-nav-button navElementInner" id="moviesTicketsBtn"><a href="#movieTickets" class="navMovieTickets">Movie Tickets</a></button>
+                        </div>
+                        <div>
+                            <button type="button" class="secion-nav-button navElementInner" id="moviesReservationsBtn"><a href="#movieReservations" class="navMovieReservations">Movie Reservations</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="navElementInner" id="cafeMenu"><a href="#cafe" class="cafeLink">CAFE ▼</a>
+                    <div class="navSubmenu" id="submenuCafe">
+                        <div>
+                            <button type="button" class="secion-nav-button navElementInner" id="cafeExploreBtn"><a href="#cafe" class="cafeLink">Cafe</a></button>
+                        </div>
+                        <div>
+                            <button type="button" class="secion-nav-button navElementInner" id="cafeTicketsBtn"><a href="#cafeTickets" class="navCafeTickets">Cafe Tickets</a></button>
+                        </div>
+                        <div>
+                            <button type="button" class="secion-nav-button navElementInner" id="cafeReservationsBtn"><a href="#cafeReservations" class="navCafeReservations">Cafe Reservations</a></button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </nav>
 
@@ -151,8 +175,8 @@
                 <div class="section-content" id="museumTicketSection">
                     <div class="tickets-container">
                         <div class="tickets-form">
+                            <h1>Purchase Museum Tickets</h1>
                             <span id="mtConfirmation"></span>
-                            <h2>Purchase Tickets</h2>
                             <form name="ticketReservations">
                                 <label for="fname">Full Name:</label><br>
                                 <input type="text" placeholder="Enter Name" id="ticketReservationName"><br>
@@ -169,21 +193,10 @@
                                 <input type="checkbox" class="checkInput" id="assistedListening" name="assistedListening" value="assistedListening">
                                 <label for="assistedListening">Reserve an assisted listening device</label><br>
                                 <span class="ticket-total-label">Total: $</span><div id="ticket-total">0</div>
-                                <input type="submit" value="Submit" id="ticketSubmitButton">
+                                <input type="submit" value="Submit" id="ticketSubmitButton" class="submitButtonStyle">
                             </form>
                         </div>
-                        <div class="tickets-info-container">
-                            <div class="tickets-image">
-                                
-                            </div>
-                            <div class="tickets-description">
-                                <h3>Plan your journey to the stars!</h3>
-
-                                <p>
-                                    Launch into the history of flight by surrounding yourself with icons of air and space travel. The flagship building on the National Mall in Washington, D.C, exhibits aircraft, spacecraft, missiles, rockets, and other flight-related artifacts. The museum has an IMAX theater for out-of-this-world escapes.
-                                </p>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -192,13 +205,22 @@
 
             <div class="section" id="ticketReservations"> 
                 
-                <div class="section-content" id="museumReservationSection">
-                    <form name="lockupReservation">
-                        <label for="freservation">Ticket Reservation Number:</label><br>
-                        <input type="text" placeholder="Enter Reservation Number" id="ticketReservationNumber">
-                        <input type="button" value="Submit" id="ticketLookupButton">
-                    </form>
-                    <div id="lookUpResResult"></div>
+                <div class="section-content ticketResFlexbox" id="museumReservationSection">
+                    <div class="tickets-container">
+                        <div class="tickets-form">
+                            <h1>Review Your Museum Tickets</h1>
+                            <form name="lockupReservation">
+                                <label for="freservation">Ticket Reservation Number:</label><br>
+                                <input type="text" placeholder="Enter Reservation Number" id="ticketReservationNumber">
+                                <input type="button" value="Submit" id="ticketLookupButton" class="submitButtonStyle">
+                            </form>
+                            <br><br>
+                            <div id="lookUpResResult"></div>
+                            
+                        </div>
+                        
+                    </div>
+
                 </div>
 
             </div>
@@ -207,79 +229,100 @@
 
             <div class="section" id="movies">
 
-                <nav class="section-navigation movies-navigation">
-                    <div class="section-navigation-link">
-                        <button type="button" class="secion-nav-button button1" id="movieOptionsBtn">Movies</button>
-                    </div>
-                    <div class="section-navigation-link">
-                        <button type="button" class="secion-nav-button button2" id="movieTicketsBtn">Movie Tickets</button>
-                    </div>
-                    <div class="section-navigation-link">
-                        <button type="button" class="secion-nav-button button3" id="movieReservationsBtn">View Reservations</button>
-                    </div>
-                </nav>
+                
                 <div class="section-content" id="movieOptionSection">
-                    Movie Options
+                    <div class="exhibits-container">
+                        <h1>Visit the Stars on the Big Screen with our Space Themed Movies</h1>
+                        <div class="exhibitsFlexbox">
+                            <div class="theYearOfPluto exhibitTitleFlex">
+                                <div class="exhibitTitle">
+                                    The Year of Pluto
+                                </div>
+                            </div>
+                            <div class="journeyOfApollo exhibitTitleFlex">
+                                <div class="exhibitTitle">
+                                    The Journey of Apollo 11
+                                </div>
+                            </div>
+                            <div class="theSpaceShuttle exhibitTitleFlex">
+                                <div class="exhibitTitle">
+                                    The Space Shuttle
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="section-content inactive" id="movieTicketSection">
+                
+                
+            </div>
+
+            <!------------------Movie Tickets---------------------------------------->
+
+            <div class="section" id="movieTickets"> 
+
+                <div class="section-content" id="movieTicketSection">
                     <div class="tickets-container">
                         <div class="tickets-form">
-                            <h2>Purchase Movie Tickets</h2>
-                            <form>
+                            <h1>Purchase Movie Tickets</h1>
+                            <span id="movtConfirmation"></span>
+                            <form name="movieTicketReservations">
                                 <label for="fname">Full Name:</label><br>
-                                <input type="text" placeholder="Enter Name"><br>
-                                <label for="fname">Adult Ticket $10.00</label><br>
+                                <input type="text" placeholder="Enter Name" id="ticketReservationName"><br>
+                                <label for="fname">Adult Ticket $10.00 (per movie)</label><br>
                                 <input type="number" value="0" id="movieAdult"><br>
-                                <label for="fname">Child Ticket $5.00</label><br>
+                                <label for="fname">Child Ticket $5.00 (per movie)</label><br>
                                 <input type="number" value="0" id="movieChild"><br>
-                                <label for="fname">Senior Ticket $8.00</label><br>
+                                <label for="fname">Senior Ticket $8.00 (per movie)</label><br>
                                 <input type="number" value="0" id="movieSenior"><br>
-                                <label for="fname">Veteran/Active Military Ticket $7</label><br>
+                                <label for="fname">Veteran/Active Military Ticket $7 (per movie)</label><br>
                                 <input type="number" value="0" id="movieVet"><br>
                                 <input type="checkbox" class="checkInput" id="movie1" name="movie1" value="movie1">
-                                <label for="movie1">Movie 1</label><br>
+                                <label for="movie1">The Year of Pluto</label><br>
                                 <input type="checkbox" class="checkInput" id="movie2" name="movie2" value="movie2">
-                                <label for="movie2">Movie 2</label><br>
+                                <label for="movie2">The Journey of Apollo 11</label><br>
                                 <input type="checkbox" class="checkInput" id="movie3" name="movie3" value="movie3">
-                                <label for="movie3">Movie 2</label><br>
-                                <span class="movie-total-label">Total: $</span><div id="movie-total">0</div>
-                                <input type="submit" value="Submit" id="submitButton">
+                                <label for="movie3">The Space Shuttle</label><br>
+                                <span class="movie-total-label">Total: $<span id="movie-total">0</span></span>
+                                <input type="submit" value="Submit" id="ticketSubmitButton" class="submitButtonStyle">
                             </form>
                         </div>
-                        <div class="tickets-info-container">
-                            <div class="tickets-image">
-                                
-                            </div>
-                            <div class="tickets-description">
-                                <h3>Plan your journey to the stars!</h3>
-
-                                <p>
-                                    Launch into the history of flight by surrounding yourself with icons of air and space travel. The flagship building on the National Mall in Washington, D.C, exhibits aircraft, spacecraft, missiles, rockets, and other flight-related artifacts. The museum has an IMAX theater for out-of-this-world escapes.
-                                </p>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
-                <div class="section-content inactive" id="movieReservationSection">
-                    Movie Reservations
+                
+                
+            </div>
+
+            <!------------------Movie Reservations---------------------------------------->
+
+            <div class="section" id="movieReservations"> 
+
+                <div class="section-content ticketResFlexbox" id="movieReservationSection">
+                    <div class="tickets-container">
+                        <div class="tickets-form">
+                            <h1>Review Your Movie Tickets</h1>
+                            <form name="lockupReservation">
+                                <label for="freservation">Movie Ticket Reservation Number:</label><br>
+                                <input type="text" placeholder="Enter Reservation Number" id="movieTicketReservationNumber">
+                                <input type="button" value="Submit" id="movieTicketLookupButton" class="submitButtonStyle">
+                            </form>
+                            <br><br>
+                            <div id="lookUpResResult"></div>
+                            
+                        </div>
+                        
+                    </div>
+
                 </div>
+
+
             </div>
 
             <!------------------Cafe---------------------------------------->
 
             <div class="section" id="cafe">
 
-            <nav class="section-navigation cafe-navigation">
-                <div class="section-navigation-link">
-                    <button type="button" class="secion-nav-button button1" id="cafeOptionsBtn">Cafe</button>
-                </div>
-                <div class="section-navigation-link">
-                    <button type="button" class="secion-nav-button button2" id="cafePurchaseBtn">Purchase Meals</button>
-                </div>
-                <div class="section-navigation-link">
-                    <button type="button" class="secion-nav-button button3" id="cafeReservationsBtn">View Reservations</button>
-                </div>
-            </nav>
+            
             <div class="section-content" id="cafeOptionsSection">
                 <div class="cafe-container">
                     <div class="cafe-form">
@@ -287,8 +330,14 @@
                     </div>
                 </div>
             </div>
+            
+        </div>
 
-            <div class="section-content inactive" id="cafePurchaseSection">
+        <!------------------Cafe Tickets---------------------------------------->
+
+        <div class="section" id="cafeTickets"> 
+                
+            <div class="section-content" id="cafePurchaseSection">
                 <div class="tickets-container">
                     <div class="tickets-form">
                         <h2>Purchase Meal Tickets</h2>
@@ -303,11 +352,11 @@
                             <input type="number" value="0" id="cafeSenior"><br>
                             <label for="fname">Veteran/Active Military Meal $10</label><br>
                             <input type="number" value="0" id="cafeVet"><br>
-                            <input type="checkbox" class="checkInput" id="movie1" name="movie1" value="movie1">
+                            <input type="checkbox" class="checkInput" id="meal1" name="movie1" value="movie1">
                             <label for="movie1">Movie 1</label><br>
-                            <input type="checkbox" class="checkInput" id="movie2" name="movie2" value="movie2">
+                            <input type="checkbox" class="checkInput" id="meal2" name="movie2" value="movie2">
                             <label for="movie2">Movie 2</label><br>
-                            <input type="checkbox" class="checkInput" id="movie3" name="movie3" value="movie3">
+                            <input type="checkbox" class="checkInput" id="meal3" name="movie3" value="movie3">
                             <label for="movie3">Movie 2</label><br>
                             <span class="cafe-total-label">Total: $</span><div id="cafe-total">0</div>
                             <input type="submit" value="Submit" id="submitButton">
@@ -328,15 +377,22 @@
                 </div>
             </div>
 
+        </div>
+
+        <!------------------Cafe Reservations---------------------------------------->
+
+        <div class="section" id="cafeReservations"> 
+                
             <div class="section-content inactive" id="cafeReservationsSection">
                 Reservations
             </div>
+
         </div>
 
         <!------------------JS Files---------------------------------------->
 
         <script src="javascripts/global.js" async defer></script>
-        <script src="javascripts/home.js" async defer></script>
+        <script src="javascripts/spaceBackground.js" async defer></script>
         <script src="javascripts/menu.js" async defer></script>
         <script src="javascripts/submenus.js" async defer></script>
         <script src="javascripts/totalCalculator.js" async defer></script>

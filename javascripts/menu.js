@@ -9,10 +9,12 @@ let cafeSection = document.querySelector("#cafe");
 let NASASection = document.querySelector("#NASA");
 let puzzleSection = document.querySelector("#exhibitsPuzzle");
 let ticketReservations = document.querySelector("#ticketReservations");
+let movieTickets = document.querySelector("#movieTickets");
+let movieReservations = document.querySelector("#movieReservations");
+let cafeTickets = document.querySelector("#cafeTickets");
+let cafeReservations = document.querySelector("#cafeReservations");
 
 let currentActiveMenuSection = document.querySelector(".activeSection");
-
-
 
 allNavButtons.forEach(navButton => navButton.addEventListener('click', (e) => {
     if (!e.target.classList.contains("activeLink")) {
@@ -43,14 +45,24 @@ allNavButtons.forEach(navButton => navButton.addEventListener('click', (e) => {
         } else if (e.target.classList.contains('navTicketRes')) {
             currentActiveMenuSection.classList.remove('activeSection');
             ticketReservations.classList.add('activeSection');
+        } else if (e.target.classList.contains('navMovieTickets')) {
+            currentActiveMenuSection.classList.remove('activeSection');
+            movieTickets.classList.add('activeSection');
+        } else if (e.target.classList.contains('navMovieReservations')) {
+            currentActiveMenuSection.classList.remove('activeSection');
+            movieReservations.classList.add('activeSection');
+        } else if (e.target.classList.contains('navCafeTickets')) {
+            currentActiveMenuSection.classList.remove('activeSection');
+            cafeTickets.classList.add('activeSection');
+        } else if (e.target.classList.contains('navCafeReservations')) {
+            currentActiveMenuSection.classList.remove('activeSection');
+            cafeReservations.classList.add('activeSection');
         }
 
     }
     currentActiveMenuBtn.classList.remove("activeLink");
     currentActiveMenuBtn = e.target;
     currentActiveMenuBtn.classList.add("activeLink");
-    //console.log(currentActiveMenuBtn);
-    //console.log(!e.target.classList.contains("activeLink"));
     
 }));
 

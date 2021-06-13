@@ -22,13 +22,8 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
         //    if (response == 'granted') {
          //       console.log("accelerometer permission granted");
                 window.addEventListener("deviceorientation", e => setTimeout(handleOrientation(e), 100), true);
-
-                
-
         //    }
        // });
-    
-
 } else {
     (function() {
         document.addEventListener("mousemove", space);
