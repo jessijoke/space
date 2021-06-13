@@ -1,5 +1,12 @@
 /*-------- Museum Tickets --------*/
 
+function switchSubsection(subsection) {
+    if (!subsection.classList.contains("activeLink")) {
+        currentActiveMenuSection.classList.remove('activeSection');
+        subsection.classList.add('activeSection');
+     }
+ }
+
 let museumTicketsBtn = document.querySelector("#museumTicketsBtn");
 let museumReservationsBtn = document.querySelector("#museumReservationsBtn");
 let museumTicketSection = document.querySelector("#museumTicketSection");
@@ -62,32 +69,7 @@ museumTicketsBtn.addEventListener("click", () => {
  let exhibitsNASASection = document.querySelector("#exhibitsNASASection");
  let exhibitsPuzzleSection = document.querySelector("#exhibitsPuzzleSection");
 
- exhibitsExploreBtn.addEventListener("click", () => { 
-    if (exhibitsExploreSection.classList.contains('inactive')) {
-        console.log('test');
-        exhibitsExploreSection.classList.remove('inactive');
-        exhibitsNASASection.classList.add('inactive');
-        exhibitsPuzzleSection.classList.add('inactive');
-    }
- }, false);
 
- exhibitsNASABtn.addEventListener("click", () => { 
-    if (exhibitsNASASection.classList.contains('inactive')) {
-        console.log('click');
-        exhibitsExploreSection.classList.add('inactive');
-        exhibitsNASASection.classList.remove('inactive');
-        exhibitsPuzzleSection.classList.add('inactive');
-    }
- }, false);
-
- exhibitsPuzzleBtn.addEventListener("click", () => { 
-    if (exhibitsPuzzleSection.classList.contains('inactive')) {
-        console.log('click');
-        exhibitsExploreSection.classList.add('inactive');
-        exhibitsNASASection.classList.add('inactive');
-        exhibitsPuzzleSection.classList.remove('inactive');
-    }
- }, false);
 
  let cafeOptionsBtn = document.querySelector("#cafeOptionsBtn");
  let cafePurchaseBtn = document.querySelector("#cafePurchaseBtn");

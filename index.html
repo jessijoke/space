@@ -19,6 +19,9 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
+        <!------------------Main Navigation---------------------------------------->
+
         <nav id="mainNavigation">
             <div class="logo"><img src="images/logo.png"></div>
             <div class="navElements">
@@ -26,13 +29,13 @@
                 <div class="navElementInner" id="exhibitsMenu"><a href="#exhibits" class="exhibitsLink">EXHIBITS ▼</a>
                     <div class="navSubmenu" id="submenuExhibits">
                         <div>
-                            <button type="button" class="secion-nav-button" id="exhibitsExploreBtn">Explore Exhibits</button>
+                            <button type="button" class="secion-nav-button navElementInner" id="exhibitsExploreBtn"><a href="#NASA" class="navExploreExhibits">Explore Exhibits</a></button>
                         </div>
                         <div>
-                            <button type="button" class="secion-nav-button" id="exhibitsNASABtn">NASA Mars Rover</button>
+                            <button type="button" class="secion-nav-button navElementInner" id="exhibitsNASABtn"><a href="#NASA" class="navNASA">NASA Mars Rover</a></button>
                         </div>
                         <div>
-                            <button type="button" class="secion-nav-button" id="exhibitsPuzzleBtn">Solar System Puzzle</button>
+                            <button type="button" class="secion-nav-button navElementInner" id="exhibitsPuzzleBtn"><a href="#NASA" class="navPuzzle">Solar System Puzzle</a></button>
                         </div>
                     </div>
                 </div>
@@ -41,16 +44,25 @@
                 <div class="navElementInner"><a href="#cafe" class="cafeLink">CAFE ▼</a></div>
             </div>
         </nav>
+
+        <!------------------BACKGROUND---------------------------------------->
+
         <div id="space">  
         </div>
+
+        <!------------------Individual Sections---------------------------------------->
+
         <div class="sections-container">
+
+            <!------------------Home---------------------------------------->
+
             <div class="section activeSection" id="home">
                 
                     <div class="earth">
                            
                     </div> 
                     <div class="spaceHeader">
-                        <!--<div id="text">Explore</div>-->
+                        
                         <div class="videoContainer">
                             <div class="embed-responsive">
                                 <iframe class="responsive-iframe" src="https://www.youtube.com/embed/ZkBv0okTQWg"></iframe>
@@ -59,35 +71,41 @@
                     </div>   
                              
             </div>
-            <div class="section" id="exhibits">
 
-                <nav class="section-navigation exhibit-navigation">
-                    <div class="section-navigation-link">
-                        <button type="button" class="secion-nav-button button1" id="exhibitsExploreBtn">Explore Exhibits</button>
-                    </div>
-                    <div class="section-navigation-link">
-                        <button type="button" class="secion-nav-button button2" id="exhibitsNASABtn">NASA Mars Rover</button>
-                    </div>
-                    <div class="section-navigation-link">
-                        <button type="button" class="secion-nav-button button3" id="exhibitsPuzzleBtn">Solar System Puzzle</button>
-                    </div>
-                </nav>
+            <!------------------Exhibits---------------------------------------->
+
+            <div class="section" id="exhibits"> 
                 <div class="section-content" id="exhibitsExploreSection">
                     <div class="exhibits-container">
-                        <div class="exhibits-form">
-                            <h2>Exhibits</h2>
-                        </div>
+                            Exhibits
                     </div>
                 </div>
 
-                <div class="section-content inactive" id="exhibitsNASASection">
+                
+            </div>
+
+            <!------------------Exhibits/Nasa---------------------------------------->
+
+            <div class="section" id="NASA"> 
+                
+                <div class="section-content" id="exhibitsNASASection">
                     NASA
                 </div>
 
-                <div class="section-content inactive" id="exhibitsPuzzleSection">
+            </div>
+
+            <!------------------Exhibits/Puzzle---------------------------------------->
+
+            <div class="section" id="exhibitsPuzzle"> 
+                
+                <div class="section-content" id="exhibitsPuzzleSection">
                     Puzzle
                 </div>
+
             </div>
+
+            <!------------------Tickets---------------------------------------->
+
             <div class="section" id="tickets">
                 <nav class="section-navigation exhibit-navigation">
                     <div class="section-navigation-link">
@@ -144,6 +162,8 @@
                     <div id="lookUpResResult"></div>
                 </div>
             </div>
+
+            <!------------------Movies---------------------------------------->
 
             <div class="section" id="movies">
 
@@ -204,6 +224,8 @@
                     Movie Reservations
                 </div>
             </div>
+
+            <!------------------Cafe---------------------------------------->
 
             <div class="section" id="cafe">
 
@@ -270,6 +292,8 @@
                 Reservations
             </div>
         </div>
+
+        <!------------------JS Files---------------------------------------->
 
         <script src="javascripts/global.js" async defer></script>
         <script src="javascripts/home.js" async defer></script>

@@ -6,6 +6,8 @@ let exhibitsSection = document.querySelector("#exhibits");
 let ticketsSection = document.querySelector("#tickets");
 let moviesSection = document.querySelector("#movies");
 let cafeSection = document.querySelector("#cafe");
+let NASASection = document.querySelector("#NASA");
+let puzzleSection = document.querySelector("#exhibitsPuzzle");
 
 let currentActiveMenuSection = document.querySelector(".activeSection");
 
@@ -16,7 +18,7 @@ allNavButtons.forEach(navButton => navButton.addEventListener('click', (e) => {
         currentActiveMenuSection = document.querySelector(".activeSection");
         currentActiveMenuSection.classList.add('slideOut');
         setTimeout(function(){ currentActiveMenuSection.classList.remove('slideOut'); }, 200)
-        if (e.target.classList.contains('exhibitsLink')) {
+        if (e.target.classList.contains('exhibitsLink') || e.target.classList.contains('navExploreExhibits')) {
             currentActiveMenuSection.classList.remove('activeSection');
             exhibitsSection.classList.add('activeSection');
         } else if (e.target.classList.contains('homeLink')) {
@@ -31,6 +33,12 @@ allNavButtons.forEach(navButton => navButton.addEventListener('click', (e) => {
         } else if (e.target.classList.contains('cafeLink')) {
             currentActiveMenuSection.classList.remove('activeSection');
             cafeSection.classList.add('activeSection');
+        } else if (e.target.classList.contains('navNASA')) {
+            currentActiveMenuSection.classList.remove('activeSection');
+            NASASection.classList.add('activeSection');
+        } else if (e.target.classList.contains('navPuzzle')) {
+            currentActiveMenuSection.classList.remove('activeSection');
+            puzzleSection.classList.add('activeSection');
         }
 
     }
