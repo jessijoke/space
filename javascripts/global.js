@@ -36,6 +36,9 @@ let cafeSubmenu = document.querySelector("#submenuCafe");
 const ticketSubmitButton = document.querySelector("#ticketSubmitButton");
 const lookupResBtn = document.querySelector("#ticketLookupButton");
 
+//Grid Flexbox Description Hoves
+let gridHovers = document.querySelectorAll(".exhibitTitleFlex");
+
 
 /*
 let exhibitsExploreBtn = document.querySelector("#exhibitsExploreBtn");
@@ -52,76 +55,76 @@ let museumReservationsSection = document.querySelector("#museumReservationSectio
 
 
 
- let movieOptionsBtn = document.querySelector("#movieOptionsBtn");
- let movieTicketsBtn = document.querySelector("#movieTicketsBtn");
- let movieReservationsBtn = document.querySelector("#movieReservationsBtn");
- let movieOptionSection = document.querySelector("#movieOptionSection");
- let movieTicketSection = document.querySelector("#movieTicketSection");
- let movieReservationSection = document.querySelector("#movieReservationSection");
+let movieOptionsBtn = document.querySelector("#movieOptionsBtn");
+let movieTicketsBtn = document.querySelector("#movieTicketsBtn");
+let movieReservationsBtn = document.querySelector("#movieReservationsBtn");
+let movieOptionSection = document.querySelector("#movieOptionSection");
+let movieTicketSection = document.querySelector("#movieTicketSection");
+let movieReservationSection = document.querySelector("#movieReservationSection");
 
 
- movieOptionsBtn.addEventListener("click", () => { 
-    if (movieOptionSection.classList.contains('inactive')) {
-        console.log('test');
-        movieOptionSection.classList.remove('inactive');
-        movieTicketSection.classList.add('inactive');
-        movieReservationSection.classList.add('inactive');
-    }
- }, false);
+movieOptionsBtn.addEventListener("click", () => { 
+if (movieOptionSection.classList.contains('inactive')) {
+    console.log('test');
+    movieOptionSection.classList.remove('inactive');
+    movieTicketSection.classList.add('inactive');
+    movieReservationSection.classList.add('inactive');
+}
+}, false);
 
- movieTicketsBtn.addEventListener("click", () => { 
-    if (movieTicketSection.classList.contains('inactive')) {
-        console.log('click');
-        movieOptionSection.classList.add('inactive');
-        movieTicketSection.classList.remove('inactive');
-        movieReservationSection.classList.add('inactive');
-    }
- }, false);
+movieTicketsBtn.addEventListener("click", () => { 
+if (movieTicketSection.classList.contains('inactive')) {
+    console.log('click');
+    movieOptionSection.classList.add('inactive');
+    movieTicketSection.classList.remove('inactive');
+    movieReservationSection.classList.add('inactive');
+}
+}, false);
 
- movieReservationsBtn.addEventListener("click", () => { 
-    if (movieReservationSection.classList.contains('inactive')) {
-        console.log('click');
-        movieOptionSection.classList.add('inactive');
-        movieTicketSection.classList.add('inactive');
-        movieReservationSection.classList.remove('inactive');
-    }
- }, false);
-
-
+movieReservationsBtn.addEventListener("click", () => { 
+if (movieReservationSection.classList.contains('inactive')) {
+    console.log('click');
+    movieOptionSection.classList.add('inactive');
+    movieTicketSection.classList.add('inactive');
+    movieReservationSection.classList.remove('inactive');
+}
+}, false);
 
 
 
- let cafeOptionsBtn = document.querySelector("#cafeOptionsBtn");
- let cafePurchaseBtn = document.querySelector("#cafePurchaseBtn");
- let cafeReservationsBtn = document.querySelector("#cafeReservationsBtn");
- let cafeOptionsSection = document.querySelector("#cafeOptionsSection");
- let cafePurchaseSection = document.querySelector("#cafePurchaseSection");
- let cafeReservationsSection = document.querySelector("#cafeReservationsSection");
 
- cafeOptionsBtn.addEventListener("click", () => { 
-    if (cafeOptionsSection.classList.contains('inactive')) {
-        console.log('test');
-        cafeOptionsSection.classList.remove('inactive');
-        cafePurchaseSection.classList.add('inactive');
-        cafeReservationsSection.classList.add('inactive');
-    }
- }, false);
 
- cafePurchaseBtn.addEventListener("click", () => { 
-    if (cafePurchaseSection.classList.contains('inactive')) {
-        console.log('click');
-        cafeOptionsSection.classList.add('inactive');
-        cafePurchaseSection.classList.remove('inactive');
-        cafeReservationsSection.classList.add('inactive');
-    }
- }, false);
+let cafeOptionsBtn = document.querySelector("#cafeOptionsBtn");
+let cafePurchaseBtn = document.querySelector("#cafePurchaseBtn");
+let cafeReservationsBtn = document.querySelector("#cafeReservationsBtn");
+let cafeOptionsSection = document.querySelector("#cafeOptionsSection");
+let cafePurchaseSection = document.querySelector("#cafePurchaseSection");
+let cafeReservationsSection = document.querySelector("#cafeReservationsSection");
 
- cafeReservationsBtn.addEventListener("click", () => { 
-    if (cafeReservationsSection.classList.contains('inactive')) {
-        console.log('click');
-        cafeOptionsSection.classList.add('inactive');
-        cafePurchaseSection.classList.add('inactive');
-        cafeReservationsSection.classList.remove('inactive');
-    }
- }, false);
+cafeOptionsBtn.addEventListener("click", () => { 
+if (cafeOptionsSection.classList.contains('inactive')) {
+    console.log('test');
+    cafeOptionsSection.classList.remove('inactive');
+    cafePurchaseSection.classList.add('inactive');
+    cafeReservationsSection.classList.add('inactive');
+}
+}, false);
+
+cafePurchaseBtn.addEventListener("click", () => { 
+if (cafePurchaseSection.classList.contains('inactive')) {
+    console.log('click');
+    cafeOptionsSection.classList.add('inactive');
+    cafePurchaseSection.classList.remove('inactive');
+    cafeReservationsSection.classList.add('inactive');
+}
+}, false);
+
+cafeReservationsBtn.addEventListener("click", () => { 
+if (cafeReservationsSection.classList.contains('inactive')) {
+    console.log('click');
+    cafeOptionsSection.classList.add('inactive');
+    cafePurchaseSection.classList.add('inactive');
+    cafeReservationsSection.classList.remove('inactive');
+}
+}, false);
 */

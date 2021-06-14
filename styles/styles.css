@@ -264,7 +264,13 @@ a.activeLink {
 
 /*-------------Sections CSS-------------*/
 .inactive {
-  display: none !important;
+  display: none;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.gridTall {
+  display: block;
 }
 
 h3 {
@@ -622,5 +628,37 @@ span.ticket-total-label, span.movie-total-label, .movie-total {
   background-image: url("../images/movies/the-space-shuttle.jpg");
   background-size: cover;
   background-position: center;
+}
+
+.vegetarianBuffet {
+  height: 350px;
+  width: 250px;
+  background-image: url("../images/cafe/vege.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.standardBuffet {
+  height: 350px;
+  width: 250px;
+  background-image: url("../images/cafe/standard.jpg");
+  background-size: cover;
+  background-position: center top;
+}
+
+.worldCuisines {
+  height: 350px;
+  width: 250px;
+  background-image: url("../images/cafe/worldcuisine.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.gridHovers {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 /*# sourceMappingURL=styles.css.map */

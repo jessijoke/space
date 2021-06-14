@@ -18,12 +18,12 @@ function handleOrientation(e) {
 }
 
 if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
-       // DeviceMotionEvent.requestPermission().then(response => {
+    // DeviceMotionEvent.requestPermission().then(response => {
         //    if (response == 'granted') {
-         //       console.log("accelerometer permission granted");
+        //       console.log("accelerometer permission granted");
                 window.addEventListener("deviceorientation", e => setTimeout(handleOrientation(e), 100), true);
         //    }
-       // });
+    // });
 } else {
     (function() {
         document.addEventListener("mousemove", space);
@@ -46,38 +46,37 @@ if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
 }
 
 
-
 //alert("This is going to work");
-    /*var gn = new GyroNorm();
+/*var gn = new GyroNorm();
 
-    let displayText = document.querySelector("#text");
+let displayText = document.querySelector("#text");
 
-   //alert('this is new');
+//alert('this is new');
 
-    gn.init().then(function() {
-        start_gn();
-    });
+gn.init().then(function() {
+    start_gn();
+});
 
-    function start_gn() {
-        gn.start(gnCallBack);
+function start_gn() {
+    gn.start(gnCallBack);
+}
+
+function gnCallBack(data) {
     }
+    */
+    // Process:
+// data.do.alpha	( deviceorientation event alpha value )
+// data.do.beta		( deviceorientation event beta value )
+// data.do.gamma	( deviceorientation event gamma value )
+// data.do.absolute	( deviceorientation event absolute value )
+    // data.dm.x		( devicemotion event acceleration x value )
+// data.dm.y		( devicemotion event acceleration y value )
+// data.dm.z		( devicemotion event acceleration z value )
 
-    function gnCallBack(data) {
-        }
-        */
-        // Process:
-    // data.do.alpha	( deviceorientation event alpha value )
-    // data.do.beta		( deviceorientation event beta value )
-    // data.do.gamma	( deviceorientation event gamma value )
-    // data.do.absolute	( deviceorientation event absolute value )
-     // data.dm.x		( devicemotion event acceleration x value )
-    // data.dm.y		( devicemotion event acceleration y value )
-    // data.dm.z		( devicemotion event acceleration z value )
+// data.dm.gx		( devicemotion event accelerationIncludingGravity x value )
+// data.dm.gy		( devicemotion event accelerationIncludingGravity y value )
+// data.dm.gz		( devicemotion event accelerationIncludingGravity z value )
 
-    // data.dm.gx		( devicemotion event accelerationIncludingGravity x value )
-    // data.dm.gy		( devicemotion event accelerationIncludingGravity y value )
-    // data.dm.gz		( devicemotion event accelerationIncludingGravity z value )
-
-    // data.dm.alpha	( devicemotion event rotationRate alpha value )
-    // data.dm.beta		( devicemotion event rotationRate beta value )
-    // data.dm.gamma	( devicemotion event rotationRate gamma value )
+// data.dm.alpha	( devicemotion event rotationRate alpha value )
+// data.dm.beta		( devicemotion event rotationRate beta value )
+// data.dm.gamma	( devicemotion event rotationRate gamma value )

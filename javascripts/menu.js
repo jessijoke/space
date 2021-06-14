@@ -66,6 +66,7 @@ allNavButtons.forEach(navButton => navButton.addEventListener('click', (e) => {
     
 }));
 
+
 /* 
 reservations have many tickets < tickets belong to reservations
 

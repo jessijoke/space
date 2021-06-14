@@ -51,9 +51,9 @@ document.addEventListener("keyup", event => {
     movieTicketTotal.innerHTML = (calculateTotal(movieAdultQty.value, 10, movieChildQty.value, 5, movieSeniorQty.value, 8, movieVetQty.value, 7) * movieCount).toString();
     cafeTicketTotal.innerHTML = calculateTotal(cafeAdultQty.value, 12, cafeChildQty.value, 8, cafeSeniorQty.value, 9, cafeVetQty.value, 10).toString();
 
-  });
+});
 
-  document.addEventListener("click", event => {
+document.addEventListener("click", event => {
     let museumAdultQty = document.querySelector('#museumAdult');
     let museumChildQty = document.querySelector('#museumChild');
     let museumSeniorQty = document.querySelector('#museumSenior');
@@ -103,6 +103,6 @@ document.addEventListener("keyup", event => {
     museumTicketTotal.innerHTML = calculateTotal(museumAdultQty.value, 20, museumChildQty.value, 16, museumSeniorQty.value, 18, museumVetQty.value, 17).toString();
     movieTicketTotal.innerHTML = (calculateTotal(movieAdultQty.value, 10, movieChildQty.value, 5, movieSeniorQty.value, 8, movieVetQty.value, 7) * movieCount).toString();
     cafeTicketTotal.innerHTML = calculateTotal(cafeAdultQty.value, 12, cafeChildQty.value, 8, cafeSeniorQty.value, 9, cafeVetQty.value, 10).toString();
-  });
+});
 
   

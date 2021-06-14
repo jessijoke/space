@@ -21,14 +21,14 @@ class TicketReservationAPI {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
             }
-          })
-          .then(resp => resp.json())
-          //.then(json => console.log(json.data.attributes.name))
-          .then(json => mtConfirmation.innerHTML = `We look forward to your visit ${json.data.attributes.name}!  Your reservation confirmation number is ${json.data.attributes.reservation_number}. Save this number to look up your reservation later.<br>`)
-          .catch(mtConfirmation.innerHTML = `Something went wrong, please try again.`)
+        })
+        .then(resp => resp.json())
+        //.then(json => console.log(json.data.attributes.name))
+        .then(json => mtConfirmation.innerHTML = `We look forward to your visit ${json.data.attributes.name}!  Your reservation confirmation number is ${json.data.attributes.reservation_number}. Save this number to look up your reservation later.<br>`)
+        .catch(mtConfirmation.innerHTML = `Something went wrong, please try again.`)
     }
 
     static displayReservation(data) {
@@ -67,7 +67,6 @@ class TicketReservationAPI {
 
 
 }
-
 
 
 /*
