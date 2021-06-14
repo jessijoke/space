@@ -428,10 +428,26 @@
         <!------------------Cafe Reservations---------------------------------------->
 
         <div class="section" id="cafeReservations"> 
-                
-            <div class="section-content inactive" id="cafeReservationsSection">
-                Reservations
+
+            <div class="section-content ticketResFlexbox" id="cafeReservationsSection">
+                <div class="tickets-container">
+                    <div class="tickets-form">
+                        <h1>Review Your Cafe Reservations</h1>
+                        <form name="lockupReservation">
+                            <label for="freservation">Cafe Reservation Number:</label><br>
+                            <input type="text" placeholder="Enter Reservation Number" id="cafeReservationNumber">
+                            <input type="button" value="Submit" id="cafeLookupButton" class="submitButtonStyle">
+                        </form>
+                        <br><br>
+                        <div id="lookUpResResult"></div>
+                        
+                    </div>
+                    
+                </div>
+
             </div>
+                
+            
 
         </div>
 
