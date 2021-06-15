@@ -233,10 +233,15 @@ p {
     font-size: 15px;
 }
 
-#exhibits, #tickets, #movies, #cafe, #NASA, #exhibitsPuzzle, #cafeTickets, #cafeReservations, #movieReservations, #movieTickets, #movieReservations {
+#exhibits, #tickets, #movies, #cafe, #NASA, #cafeTickets, #cafeReservations, #movieReservations, #movieTickets, #movieReservations {
+    align-items: flex-end;
+    margin-top: 150px;
+    //background-color:white;
+}
+
+#exhibitsPuzzle {
     align-items: flex-end;
     margin-top: 200px;
-    //background-color:white;
 }
 
 .section-content {
