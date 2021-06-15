@@ -661,4 +661,14 @@ span.ticket-total-label, span.movie-total-label, .movie-total {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+#exhibitsPuzzle {
+  margin-top: 0px;
+  max-height: 100vh;
+}
+
+.gameFrame {
+  border: none;
+  width: 100vw;
+}
 /*# sourceMappingURL=styles.css.map */
