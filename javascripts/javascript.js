@@ -2,6 +2,10 @@ ticketSubmitButton.addEventListener("click", (e) => {
     TicketReservationAPI.newReservation();
 });
 
+movieTicketSubmit.addEventListener("click", (e) => {
+    MovieReservationAPI.newReservation();
+});
+
 lookupResBtn.addEventListener("click", (e) => {
     TicketReservationAPI.getReservation();
 });

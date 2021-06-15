@@ -39,6 +39,25 @@ const lookupResBtn = document.querySelector("#ticketLookupButton");
 //Grid Flexbox Description Hoves
 let gridHovers = document.querySelectorAll(".exhibitTitleFlex");
 
+//Movie Form Variables
+let movie1Check = document.querySelector("#movie1");
+let movie2Check = document.querySelector("#movie2");
+let movie3Check = document.querySelector("#movie3");
+let ticketRestName = document.querySelector("#movieTicketReservationName");
+let movieTicketTotalForm = document.querySelector("#movie-total");
+let movTickConfirmation = document.querySelector("#movtConfirmation");
+let movieTicketSubmit = document.querySelector("#movieTicketSubmitButton");
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 let exhibitsExploreBtn = document.querySelector("#exhibitsExploreBtn");
