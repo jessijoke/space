@@ -13,6 +13,8 @@ let movieTickets = document.querySelector("#movieTickets");
 let movieReservations = document.querySelector("#movieReservations");
 let cafeTickets = document.querySelector("#cafeTickets");
 let cafeReservations = document.querySelector("#cafeReservations");
+let exhibitsMenuBtn = document.querySelector("#exhibitsMenu");
+
 
 let currentActiveMenuSection = document.querySelector(".activeSection");
 

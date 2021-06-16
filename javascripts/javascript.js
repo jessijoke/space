@@ -1,3 +1,8 @@
+let movieTicketSubmit = document.querySelector("#movieTicketSubmitButton");
+const lookupResBtn = document.querySelector("#ticketLookupButton");
+let gridHovers = document.querySelectorAll(".exhibitTitleFlex");
+const ticketSubmitButton = document.querySelector("#ticketSubmitButton");
+
 ticketSubmitButton.addEventListener("click", (e) => {
     TicketReservationAPI.newReservation();
 });
@@ -11,6 +16,7 @@ lookupResBtn.addEventListener("click", (e) => {
 });
 
 gridHovers.forEach(hover => hover.addEventListener("mouseover", (e) => {
+    console.log(e.target.childNodes)
     let gridElement = e.target.childNodes[3];
     console.log(gridElement);
     gridElement.classList.toggle('gridTall');

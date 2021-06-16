@@ -1,3 +1,14 @@
+let exhibitSubmenu = document.querySelector("#submenuExhibits");
+let exhibitsMenuBtn2 = document.querySelector("#exhibitsMenu");
+let ticketsMenuBtn = document.querySelector("#ticketsMenu");
+let ticketsSubmenu = document.querySelector("#submenuTickets");
+
+let moviesMenuBtn = document.querySelector("#moviesMenu");
+let moviesSubmenu = document.querySelector("#submenuMovies");
+
+let cafeMenuBtn = document.querySelector("#cafeMenu");
+let cafeSubmenu = document.querySelector("#submenuCafe");
+
 /*-------- Museum Tickets --------*/
 
 function switchSubsection(subsection) {
@@ -21,7 +32,7 @@ function createSubmenu(menuBtn, Submenu) {
     })
 }
 
-createSubmenu(exhibitsMenuBtn, exhibitSubmenu);
+createSubmenu(exhibitsMenuBtn2, exhibitSubmenu);
 createSubmenu(ticketsMenuBtn, ticketsSubmenu);
 createSubmenu(moviesMenuBtn, moviesSubmenu);
 createSubmenu(cafeMenuBtn, cafeSubmenu);

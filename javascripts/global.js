@@ -13,31 +13,6 @@ let mtConfirmation = document.querySelector("#mtConfirmation");
 let lookupResNumber = document.querySelector('#ticketReservationNumber');
 let lookupResResult = document.querySelector('#lookUpResResult');
 
-//Calculator
-
-let museumTicketTotal = document.querySelector("#ticket-total");
-let movieTicketTotal = document.querySelector("#movie-total");
-let cafeTicketTotal = document.querySelector("#cafe-total");
-
-//Navigation Submenu
-let exhibitsMenuBtn = document.querySelector("#exhibitsMenu");
-let exhibitSubmenu = document.querySelector("#submenuExhibits");
-
-let ticketsMenuBtn = document.querySelector("#ticketsMenu");
-let ticketsSubmenu = document.querySelector("#submenuTickets");
-
-let moviesMenuBtn = document.querySelector("#moviesMenu");
-let moviesSubmenu = document.querySelector("#submenuMovies");
-
-let cafeMenuBtn = document.querySelector("#cafeMenu");
-let cafeSubmenu = document.querySelector("#submenuCafe");
-
-//Ticket Backend Vars
-const ticketSubmitButton = document.querySelector("#ticketSubmitButton");
-const lookupResBtn = document.querySelector("#ticketLookupButton");
-
-//Grid Flexbox Description Hoves
-let gridHovers = document.querySelectorAll(".exhibitTitleFlex");
 
 //Movie Form Variables
 let movie1Check = document.querySelector("#movie1");
@@ -46,7 +21,7 @@ let movie3Check = document.querySelector("#movie3");
 let ticketRestName = document.querySelector("#movieTicketReservationName");
 let movieTicketTotalForm = document.querySelector("#movie-total");
 let movTickConfirmation = document.querySelector("#movtConfirmation");
-let movieTicketSubmit = document.querySelector("#movieTicketSubmitButton");
+
 
 
 
