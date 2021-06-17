@@ -29,21 +29,24 @@ class MovieReservationAPI {
         })
         .then(resp => resp.json())
         //.then(json => console.log(json.data.attributes.name))
-        //.then(json => movTickConfirmation.innerHTML = `We look forward to your visit ${json.data.attributes.name}!  Your reservation confirmation number is ${json.data.attributes.reservation_number}. Save this number to look up your reservation later.<br>`)
+        .then(json => movTickConfirmation.innerHTML = `We look forward to your visit ${json.data.attributes.name}!  Your reservation confirmation number is ${json.data.attributes.reservation_number}. Save this number to look up your reservation later.<br>`)
         .catch(movTickConfirmation.innerHTML = `Something went wrong, please try again.`)
     }
 
     static displayReservation(data) {
         //console.log(data.data[0].attributes.name)
-        document.getElementById('lookUpResResult').innerHTML = "";
+        document.getElementById('lookUpMovieResResult').innerHTML = "";
         console.log(data)
+        
         const nameDiv = document.createElement('div');
         nameDiv.innerHTML = `Name: ${data.data[0].attributes.name}`;
-        document.getElementById('lookUpResResult').appendChild(nameDiv);
-        const ticketsDiv = document.createElement('div');
-        ticketsDiv.innerHTML = `Tickets Purchased: ${data.data[0].relationships.tickets.data.length}`;
-        document.getElementById('lookUpResResult').appendChild(ticketsDiv);
-        const accessDiv = document.createElement('div');
+        document.getElementById('lookUpMovieResResult').appendChild(nameDiv);
+        //const ticketsDiv = document.createElement('div');
+        //ticketsDiv.innerHTML = `Tickets Purchased: ${data.data[0].relationships.tickets.data.length}`;
+        //document.getElementById('lookUpResResult').appendChild(ticketsDiv);
+        //const accessDiv = document.createElement('div');
+
+        /*
         if (data.data[0].attributes.wheelchair == 1 && data.data[0].attributes.ald == 1) {
             accessDiv.innerHTML = `You reserved a Wheelchair and an Assisted Listening Device.`;
             document.getElementById('lookUpResResult').appendChild(accessDiv);
@@ -53,11 +56,12 @@ class MovieReservationAPI {
         } else if (data.data[0].attributes.wheelchair == 0 && data.data[0].attributes.ald == 1) {
             accessDiv.innerHTML = `You reserved an Assisted Listening Device.`;
             document.getElementById('lookUpResResult').appendChild(accessDiv);
-        }
+        }*/
+        
     }
 
     static getReservation(){
-        let reservationIdLookup = lookupResNumber.value;
+        let reservationIdLookup = lookupMovieResNumber.value;
 
         fetch(`http://localhost:3000/movieres/search/${reservationIdLookup}`)
         .then(response => response.json()) 

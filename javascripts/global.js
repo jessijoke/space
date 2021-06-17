@@ -22,6 +22,7 @@ let ticketRestName = document.querySelector("#movieTicketReservationName");
 let movieTicketTotalForm = document.querySelector("#movie-total");
 let movTickConfirmation = document.querySelector("#movtConfirmation");
 
+let lookupMovieResNumber = document.querySelector('#movieTicketReservationNumber');
 
 
 
