@@ -10,6 +10,11 @@ let trAdl = document.querySelector("#assistedListening");
 let trTotal = document.querySelector("#ticket-total");
 let mtConfirmation = document.querySelector("#mtConfirmation");
 
+let mrAdult = document.querySelector("#movieAdult");
+let mrChild = document.querySelector("#movieChild");
+let mrSenior = document.querySelector("#movieSenior");
+let mrVet = document.querySelector("#movieVet");
+
 let lookupResNumber = document.querySelector('#ticketReservationNumber');
 let lookupResResult = document.querySelector('#lookUpResResult');
 
@@ -25,10 +30,7 @@ let movTickConfirmation = document.querySelector("#movtConfirmation");
 let lookupMovieResNumber = document.querySelector('#movieTicketReservationNumber');
 
 
-
-
-
-
+// cafe vars
 
 
 

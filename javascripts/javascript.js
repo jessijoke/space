@@ -2,25 +2,42 @@ const movieTicketSubmit = document.querySelector("#movieTicketSubmitButton");
 const lookupResBtn = document.querySelector("#ticketLookupButton");
 const movielookupResBtn = document.querySelector("#ticketLookupButton");
 const movTickLookup = document.querySelector("#movieTicketLookupButton");
+const cafeTicketSubmitButton = document.querySelector("#cafeTicketSubmitButton");
+const cafeLookupSubmitBtn = document.querySelector("#cafeLookupButton");
 
 let gridHovers = document.querySelectorAll(".exhibitTitleFlex");
 const ticketSubmitButton = document.querySelector("#ticketSubmitButton");
 
 ticketSubmitButton.addEventListener("click", (e) => {
+    e.preventDefault();
     TicketReservationAPI.newReservation();
 });
 
+lookupResBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    TicketReservationAPI.getReservation();
+});
+
 movieTicketSubmit.addEventListener("click", (e) => {
+    e.preventDefault();
     MovieReservationAPI.newReservation();
 });
 
 movTickLookup.addEventListener("click", (e) => {
+    e.preventDefault();
     MovieReservationAPI.getReservation();
 });
 
-lookupResBtn.addEventListener("click", (e) => {
-    TicketReservationAPI.getReservation();
-});
+cafeTicketSubmitButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    CafeReservationAPI.newReservation();
+})
+
+cafeLookupSubmitBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    CafeReservationAPI.getReservation();
+})
+
 
 gridHovers.forEach(hover => attachListeners(hover))
 function attachListeners(hover) {

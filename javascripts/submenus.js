@@ -9,7 +9,6 @@ let moviesSubmenu = document.querySelector("#submenuMovies");
 let cafeMenuBtn = document.querySelector("#cafeMenu");
 let cafeSubmenu = document.querySelector("#submenuCafe");
 
-/*-------- Museum Tickets --------*/
 
 function switchSubsection(subsection) {
     if (!subsection.classList.contains("activeLink")) {
