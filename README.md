@@ -1,4 +1,4 @@
-## Usage
+## Air & Space Museum
 
 Air & Space Museum is a public museum webpage that allows users to get tickets for the museum attractions, and learn more about the museum.
 
