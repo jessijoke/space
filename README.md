@@ -4,6 +4,8 @@
 
 Air & Space Museum is a public museum webpage that allows users to get tickets for the museum attractions, and learn more about the museum.
 
+[View Live Frontend](https://jessijoke.github.io/space/)
+
 [View a Demo of the Website](https://www.youtube.com/watch?v=YGCjb2Gyb7I&t=1s)
 
 ### Installation
