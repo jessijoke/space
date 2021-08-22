@@ -6,19 +6,19 @@ Air & Space Museum is a public museum webpage that allows users to get tickets f
 
 [View a Demo of the Website](https://www.youtube.com/watch?v=YGCjb2Gyb7I&t=1s)
 
-###Installation
+### Installation
 
 This project has two separate github repos that are dependencies to run that are attached below, they have separate installation instructions.
 The frontend requirew very little setup since it is primarily vanilla javascript. It does utilize Sass though.
 [Install Sass](https://sass-lang.com/install)
 
 
-###Backend
+### Backend
 
 This project is a single page javascript based web application that connects to a Rails API backend. You can visit the repo for the Rails backend here.
 [SpaceAPI](https://github.com/jessijoke/space-api)
 
-###Puzzle Game
+### Puzzle Game
 
 The project also includes a Javascript puzzle that utilizes the chartjs library, the Repo for that can be found here
 [SpacePuzzle](https://github.com/jessijoke/spacePuzzle)
