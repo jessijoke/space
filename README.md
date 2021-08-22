@@ -9,7 +9,7 @@ Air & Space Museum is a public museum webpage that allows users to get tickets f
 ### Installation
 
 This project has two separate github repos that are dependencies to run that are attached below, they have separate installation instructions.
-The frontend requirew very little setup since it is primarily vanilla javascript. It does utilize Sass though.
+The frontend requirew very little setup since it is primarily vanilla javascript. You should have Sass installed though to update the scss file.
 [Install Sass](https://sass-lang.com/install)
 
 
